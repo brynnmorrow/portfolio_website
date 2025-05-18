@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Root element that wraps everything -->
+<html lang="en">
+
+<!-- Contains metadata (not shown on page) like title, CSS links -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Website</title> <!-- Title shown in brower tab -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="style.css"> <!-- Optional CSS -->
+</head>
+
+<!-- Everything user sees on screen -->
+<body class="bg-gray-100 text-gray-900">
+
+  <header class="bg-white shadow p-6">
+    <div class="container mx-auto">
+      <h1 class="text-3xl font-bold">Welcome to My Website</h1>
+      <nav class="mt-2">
+        <a href="index.html" class="text-blue-500 mr-4">Home</a>
+        <a href="about.html" class="text-blue-500">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto my-12 p-6 bg-white rounded shadow">
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+      <p>This is a short paragraph about who I am.</p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Project One</li>
+        <li>Project Two</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="bg-white p-6 mt-12 shadow-inner">
+    <div class="container mx-auto">
+      <p>&copy; 2025 My Website</p>
+    </div>
+  </footer>
+
+</body>
+</html>
