@@ -52,21 +52,24 @@
 
 <body class="bg-gray-100 text-gray-900">
 
-  <header class="bg-white shadow p-6">
-    <div class="container mx-auto flex items-center justify-between">
-      <h1 class="text-3xl font-bold">
-        <span class="custom-text">Brynn Morrow</span>
-      </h1>
-      <nav>
-        <a href="index.html" class="text-neutral-700 text-xl mr-4 hover:text-neutral-500 transition-colors duration-200">Home</a>
-        <a href="projects.html" class="text-neutral-700 text-xl hover:text-neutral-500 transition-colors duration-200">Projects</a>
-        <a href="skills.html" class="text-neutral-700 text-xl hover:text-neutral-500 transition-colors duration-200">Skills</a>
-        <a href="experience.html" class="text-neutral-700 text-xl hover:text-neutral-500 transition-colors duration-200">Experience</a>
-        <a href="education.html" class="text-neutral-700 text-xl hover:text-neutral-500 transition-colors duration-200">Education</a>
-        <a href="contact.html" class="text-neutral-700 text-xl hover:text-neutral-500 transition-colors duration-200">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <header class="bg-white shadow p-6">
+        <div class="container mx-auto flex items-center gap-6">
+          <h1 class="text-3xl font-bold shrink-0">
+            <span class="custom-text">Brynn Morrow</span>
+          </h1>
+      
+          <!-- Nav takes all remaining width; links spaced evenly -->
+          <nav class="flex flex-1 justify-evenly text-xl text-neutral-700">
+            <a href="index.html" class="hover:text-neutral-500 transition-colors duration-200">Home</a>
+            <a href="projects.html" class="hover:text-neutral-500 transition-colors duration-200">Projects</a>
+            <a href="skills.html" class="hover:text-neutral-500 transition-colors duration-200">Skills</a>
+            <a href="experience.html" class="hover:text-neutral-500 transition-colors duration-200">Experience</a>
+            <a href="education.html" class="hover:text-neutral-500 transition-colors duration-200">Education</a>
+            <a href="contact.html" class="hover:text-neutral-500 transition-colors duration-200">Contact</a>
+          </nav>
+        </div>
+      </header>
+      
 
   <main class="container mx-auto my-12 p-6 bg-white rounded shadow">
     <!-- Animated section title -->
