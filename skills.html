@@ -17,8 +17,16 @@
   <header class="bg-white shadow p-6">
     <div class="container mx-auto flex items-center justify-between">
       <h1 class="text-3xl font-bold">
-        <span class="text-blue-800 hover:text-blue-500 tanistion-colors duration-200">
-          Brynn Morrow</span>
+        <style>
+            .custom-text {
+            color: #428df7;
+            transition: color 0.2s;
+        }
+        .custom-text:hover {
+            color: #48dbfb; /* hover color */
+        }
+        </style>
+        <span class="custom-text">Brynn Morrow</span>
       </h1>
       <nav> <!-- <nav class="mt-2"> -->
         <a href="index.html" class="text-neutral-700 text-xl mr-4 hover:text-neutral-500 transition-colors duration-200">
@@ -39,33 +47,123 @@
 
   <main class="container mx-auto my-12 p-6 bg-white rounded shadow">
     <section class="mb-8">
-      <h2 class="text-2xl font-semibold mb-4">About Me</h2>
-      <div class="flex items-center space-x-6">
-        <img src="images/BrynnMorrow.jpeg" alt="Brynn Morrow" class="w-48 rounded-full shadow-md">
-        
-      <p>I am currently a student at the University of Minnesota - Twin Cities with an 
-        expected graduation of May 2026 with a Bachelor of Science in Computer Science.</p>
-      </div>
 
+        <style>
+            @keyframes glow {
+              0%, 100% { color: #428df7; }
+              50% { color: #48dbfb; }
+            }
+            .animated-text {
+              animation: glow 3s infinite;
+              font-size: 2.5rem;
+              font-family: 'Georgia', serif;
+              font-weight: bold;
+            }
+            </style>
+            
+            <h2 class="animated-text">Skills</h2>
     </section>
 
-    <section>
-      <h2 class="text-2xl font-semibold mb-4">Projects</h2>
-      <ul class="list-disc pl-5 space-y-2">
-        <li>Project One</li>
-        <li>Project Two</li>
-      </ul>
-    </section>
-
+   <!-- SKILLS ONLY -->
+<section class="max-w-6xl mx-auto px-6 py-12">
+    <h2 class="text-3xl font-bold text-center mb-6">Skills</h2>
   
-</a>
-
-
-      </div>
-    </section>
-
+    <!-- Category chips -->
+    <div class="flex flex-wrap gap-3 justify-center mb-8">
+      <button class="chip bg-purple-600 text-white" data-filter="all">✨ All</button>
+      <button class="chip bg-gray-800 text-gray-200 hover:bg-gray-700" data-filter="languages">🗣 Languages</button>
+      <button class="chip bg-gray-800 text-gray-200 hover:bg-gray-700" data-filter="frameworks">🛠 Frameworks</button>
+      <button class="chip bg-gray-800 text-gray-200 hover:bg-gray-700" data-filter="databases">🗂 Databases</button>
+      <button class="chip bg-gray-800 text-gray-200 hover:bg-gray-700" data-filter="tools">🔧 Tools</button>
+    </div>
   
-
+    <!-- Responsive grid -->
+    <div id="skillsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card -->
+      <article class="skill-card bg-gray-800 rounded-2xl p-6 text-gray-100" data-cat="languages">
+        <div class="flex items-center gap-3">
+          <span class="text-3xl">🐍</span>
+          <h3 class="text-xl font-bold">Python</h3>
+        </div>
+        <!-- <p class="text-gray-300 mt-2">3 years</p> -->
+        <div class="h-1 w-full mt-4 rounded" style="background:linear-gradient(90deg,#a855f7,#6ba9ff)"></div>
+      </article>
+  
+      <article class="skill-card bg-gray-800 rounded-2xl p-6 text-gray-100" data-cat="languages">
+        <div class="flex items-center gap-3">
+          <span class="text-3xl">☕️</span>
+          <h3 class="text-xl font-bold">Java</h3>
+        </div>
+        <!-- <p class="text-gray-300 mt-2">3 years</p> -->
+        <div class="h-1 w-full mt-4 rounded" style="background:linear-gradient(90deg,#a855f7,#6ba9ff)"></div>
+      </article>
+  
+      <article class="skill-card bg-gray-800 rounded-2xl p-6 text-gray-100" data-cat="languages">
+        <div class="flex items-center gap-3">
+          <span class="text-3xl">🧩</span>
+          <h3 class="text-xl font-bold">C</h3>
+        </div>
+        <!-- <p class="text-gray-300 mt-2">2 years</p> -->
+        <div class="h-1 w-full mt-4 rounded" style="background:linear-gradient(90deg,#a855f7,#6ba9ff)"></div>
+      </article>
+  
+      <article class="skill-card bg-gray-800 rounded-2xl p-6 text-gray-100" data-cat="frameworks">
+        <div class="flex items-center gap-3">
+          <span class="text-3xl">⚛️</span>
+          <h3 class="text-xl font-bold">React</h3>
+        </div>
+        <!-- <p class="text-gray-300 mt-2">2 years</p> -->
+        <div class="h-1 w-full mt-4 rounded" style="background:linear-gradient(90deg,#a855f7,#6ba9ff)"></div>
+      </article>
+  
+      <article class="skill-card bg-gray-800 rounded-2xl p-6 text-gray-100" data-cat="tools">
+        <div class="flex items-center gap-3">
+          <span class="text-3xl">🐙</span>
+          <h3 class="text-xl font-bold">Git & GitHub</h3>
+        </div>
+        <!-- <p class="text-gray-300 mt-2">3 years</p> -->
+        <div class="h-1 w-full mt-4 rounded" style="background:linear-gradient(90deg,#a855f7,#6ba9ff)"></div>
+      </article>
+  
+      <article class="skill-card bg-gray-800 rounded-2xl p-6 text-gray-100" data-cat="databases">
+        <div class="flex items-center gap-3">
+          <span class="text-3xl">🪶</span>
+          <h3 class="text-xl font-bold">Assembly</h3>
+        </div>
+        <!-- <p class="text-gray-300 mt-2">2 years</p> -->
+        <div class="h-1 w-full mt-4 rounded" style="background:linear-gradient(90deg,#a855f7,#6ba9ff)"></div>
+      </article>
+    </div>
+  </section>
+  
+  <!-- Minimal styles for chips (Tailwind v2 can't @apply inlined here, so keep simple classes above) -->
+  
+  <!-- Tiny filter script -->
+  <script>
+    const chips = document.querySelectorAll('.chip[data-filter]');
+    const cards = document.querySelectorAll('.skill-card');
+  
+    function setActiveChip(active) {
+      chips.forEach(c => {
+        const isActive = c === active;
+        c.classList.toggle('bg-purple-600', isActive);
+        c.classList.toggle('text-white', isActive);
+        c.classList.toggle('bg-gray-800', !isActive);
+        c.classList.toggle('text-gray-200', !isActive);
+      });
+    }
+  
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        setActiveChip(chip);
+        const f = chip.getAttribute('data-filter');
+        cards.forEach(card => {
+          card.style.display = (f === 'all' || card.dataset.cat === f) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+  
 
   </main>
 
