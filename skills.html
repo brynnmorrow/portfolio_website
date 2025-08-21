@@ -2,157 +2,158 @@
 <!-- Root element that wraps everything -->
 <html lang="en">
 
-<!-- Contains metadata (not shown on page) like title, CSS links -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brynn Morrow - Portfolio</title> <!-- Title shown in brower tab -->
+  <title>Brynn Morrow - Portfolio</title> <!-- Title shown in browser tab -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <link rel="stylesheet" href="style.css"> <!-- Optional CSS -->
+
+  <!-- Additions: brand color, chip + card styles -->
+  <style>
+    :root{
+      --brand:#6ba9ff;
+      --brand-2:#a855f7;       /* secondary accent for gradient */
+    }
+
+    /* Header name color (you already had this below; kept here for clarity) */
+    .custom-text { color:#428df7; transition: color 0.2s; }
+    .custom-text:hover { color:#48dbfb; }
+
+    /* Animated "Skills" heading */
+    @keyframes glow {
+      0%, 100% { color: #428df7; }
+      50% { color: #48dbfb; }
+    }
+    .animated-text {
+      animation: glow 3s infinite;
+      font-size: 2.5rem;
+      font-family: 'Georgia', serif;
+      font-weight: bold;
+    }
+
+    /* Category chips */
+    .chip{
+      display:inline-flex; align-items:center; gap:.5rem;
+      padding:.5rem 1rem; border-radius:9999px;
+      font-weight:600; font-size:.9rem;
+      background:#1f2937; color:#e5e7eb;
+      transition:background-color .2s, color .2s, box-shadow .2s;
+    }
+    .chip:hover{ background:#374151; }
+    .chip-active{ background:var(--brand); color:#0b1220; box-shadow:0 6px 18px rgba(107,169,255,.35); }
+
+    /* Skill cards */
+    .skill-card{ background:#111827; color:#e5e7eb; }
+    .skill-card h3{ color:var(--brand); }
+    .accent{ height:4px; width:100%; border-radius:.5rem; background:linear-gradient(90deg,var(--brand-2),var(--brand)); }
+  </style>
 </head>
 
-<!-- Everything user sees on screen -->
 <body class="bg-gray-100 text-gray-900">
 
   <header class="bg-white shadow p-6">
     <div class="container mx-auto flex items-center justify-between">
       <h1 class="text-3xl font-bold">
-        <style>
-            .custom-text {
-            color: #428df7;
-            transition: color 0.2s;
-        }
-        .custom-text:hover {
-            color: #48dbfb; /* hover color */
-        }
-        </style>
         <span class="custom-text">Brynn Morrow</span>
       </h1>
-      <nav> <!-- <nav class="mt-2"> -->
-        <a href="index.html" class="text-neutral-700 text-xl mr-4 hover:text-neutral-500 transition-colors duration-200">
-          Home</a>
-        <a href="projects.html" class="text-neutral-700 text-xl hover:text-neutral-500 transition-colors duration-200">
-          Projects</a>
-          <a href="skills.html" class="text-neutral-700 text-xl hover:text-neutral-500 transition-colors duration-200">
-            Skills</a>
-            <a href="experience.html" class="text-neutral-700 text-xl hover:text-neutral-500 transition-colors duration-200">
-              Experience</a>
-              <a href="education.html" class="text-neutral-700 text-xl hover:text-neutral-500 transition-colors duration-200">
-                Education</a>
-                <a href="contact.html" class="text-neutral-700 text-xl hover:text-neutral-500 transition-colors duration-200">
-                  Contact</a>
+      <nav>
+        <a href="index.html" class="text-neutral-700 text-xl mr-4 hover:text-neutral-500 transition-colors duration-200">Home</a>
+        <a href="projects.html" class="text-neutral-700 text-xl hover:text-neutral-500 transition-colors duration-200">Projects</a>
+        <a href="skills.html" class="text-neutral-700 text-xl hover:text-neutral-500 transition-colors duration-200">Skills</a>
+        <a href="experience.html" class="text-neutral-700 text-xl hover:text-neutral-500 transition-colors duration-200">Experience</a>
+        <a href="education.html" class="text-neutral-700 text-xl hover:text-neutral-500 transition-colors duration-200">Education</a>
+        <a href="contact.html" class="text-neutral-700 text-xl hover:text-neutral-500 transition-colors duration-200">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="container mx-auto my-12 p-6 bg-white rounded shadow">
+    <!-- Animated section title -->
     <section class="mb-8">
-
-        <style>
-            @keyframes glow {
-              0%, 100% { color: #428df7; }
-              50% { color: #48dbfb; }
-            }
-            .animated-text {
-              animation: glow 3s infinite;
-              font-size: 2.5rem;
-              font-family: 'Georgia', serif;
-              font-weight: bold;
-            }
-            </style>
-            
-            <h2 class="animated-text">Skills</h2>
+      <h2 class="animated-text">Skills</h2>
     </section>
 
-   <!-- SKILLS ONLY -->
-<section class="max-w-6xl mx-auto px-6 py-12">
-    <h2 class="text-3xl font-bold text-center mb-6">Skills</h2>
-  
-    <!-- Category chips -->
-    <div class="flex flex-wrap gap-3 justify-center mb-8">
-      <button class="chip bg-purple-600 text-white" data-filter="all">✨ All</button>
-      <button class="chip bg-gray-800 text-gray-200 hover:bg-gray-700" data-filter="languages">🗣 Languages</button>
-      <button class="chip bg-gray-800 text-gray-200 hover:bg-gray-700" data-filter="frameworks">🛠 Frameworks</button>
-      <button class="chip bg-gray-800 text-gray-200 hover:bg-gray-700" data-filter="databases">🗂 Databases</button>
-      <button class="chip bg-gray-800 text-gray-200 hover:bg-gray-700" data-filter="tools">🔧 Tools</button>
+    <!-- SKILLS ONLY -->
+    <section class="max-w-6xl mx-auto px-6 py-8">
+      <!-- Category chips -->
+      <div class="flex flex-wrap gap-3 justify-center mb-8">
+        <button class="chip chip-active" data-filter="all">✨ All</button>
+        <button class="chip" data-filter="languages">🗣 Languages</button>
+        <button class="chip" data-filter="frameworks">🛠 Frameworks</button>
+        <button class="chip" data-filter="databases">🗂 Databases</button>
+        <button class="chip" data-filter="tools">🔧 Tools</button>
+      </div>
+
+      <!-- Responsive grid -->
+      <div id="skillsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card -->
+        <article class="skill-card rounded-2xl p-6" data-cat="languages">
+          <div class="flex items-center gap-3">
+            <span class="text-3xl" style="color:var(--brand)">🐍</span>
+            <h3 class="text-xl font-bold">Python</h3>
+          </div>
+          <div class="accent mt-4"></div>
+        </article>
+
+        <article class="skill-card rounded-2xl p-6" data-cat="languages">
+          <div class="flex items-center gap-3">
+            <span class="text-3xl" style="color:var(--brand)">☕️</span>
+            <h3 class="text-xl font-bold">Java</h3>
+          </div>
+          <div class="accent mt-4"></div>
+        </article>
+
+        <article class="skill-card rounded-2xl p-6" data-cat="languages">
+          <div class="flex items-center gap-3">
+            <span class="text-3xl" style="color:var(--brand)">🧩</span>
+            <h3 class="text-xl font-bold">C</h3>
+          </div>
+          <div class="accent mt-4"></div>
+        </article>
+
+        <article class="skill-card rounded-2xl p-6" data-cat="frameworks">
+          <div class="flex items-center gap-3">
+            <span class="text-3xl" style="color:var(--brand)">⚛️</span>
+            <h3 class="text-xl font-bold">React</h3>
+          </div>
+          <div class="accent mt-4"></div>
+        </article>
+
+        <article class="skill-card rounded-2xl p-6" data-cat="tools">
+          <div class="flex items-center gap-3">
+            <span class="text-3xl" style="color:var(--brand)">🐙</span>
+            <h3 class="text-xl font-bold">Git & GitHub</h3>
+          </div>
+          <div class="accent mt-4"></div>
+        </article>
+
+        <article class="skill-card rounded-2xl p-6" data-cat="languages">
+          <div class="flex items-center gap-3">
+            <span class="text-3xl" style="color:var(--brand)">🪶</span>
+            <h3 class="text-xl font-bold">Assembly</h3>
+          </div>
+          <div class="accent mt-4"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white p-6 mt-12 shadow-inner">
+    <div class="container mx-auto">
+      <p>&copy; 2025 My Website</p>
     </div>
-  
-    <!-- Responsive grid -->
-    <div id="skillsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Card -->
-      <article class="skill-card bg-gray-800 rounded-2xl p-6 text-gray-100" data-cat="languages">
-        <div class="flex items-center gap-3">
-          <span class="text-3xl">🐍</span>
-          <h3 class="text-xl font-bold">Python</h3>
-        </div>
-        <!-- <p class="text-gray-300 mt-2">3 years</p> -->
-        <div class="h-1 w-full mt-4 rounded" style="background:linear-gradient(90deg,#a855f7,#6ba9ff)"></div>
-      </article>
-  
-      <article class="skill-card bg-gray-800 rounded-2xl p-6 text-gray-100" data-cat="languages">
-        <div class="flex items-center gap-3">
-          <span class="text-3xl">☕️</span>
-          <h3 class="text-xl font-bold">Java</h3>
-        </div>
-        <!-- <p class="text-gray-300 mt-2">3 years</p> -->
-        <div class="h-1 w-full mt-4 rounded" style="background:linear-gradient(90deg,#a855f7,#6ba9ff)"></div>
-      </article>
-  
-      <article class="skill-card bg-gray-800 rounded-2xl p-6 text-gray-100" data-cat="languages">
-        <div class="flex items-center gap-3">
-          <span class="text-3xl">🧩</span>
-          <h3 class="text-xl font-bold">C</h3>
-        </div>
-        <!-- <p class="text-gray-300 mt-2">2 years</p> -->
-        <div class="h-1 w-full mt-4 rounded" style="background:linear-gradient(90deg,#a855f7,#6ba9ff)"></div>
-      </article>
-  
-      <article class="skill-card bg-gray-800 rounded-2xl p-6 text-gray-100" data-cat="frameworks">
-        <div class="flex items-center gap-3">
-          <span class="text-3xl">⚛️</span>
-          <h3 class="text-xl font-bold">React</h3>
-        </div>
-        <!-- <p class="text-gray-300 mt-2">2 years</p> -->
-        <div class="h-1 w-full mt-4 rounded" style="background:linear-gradient(90deg,#a855f7,#6ba9ff)"></div>
-      </article>
-  
-      <article class="skill-card bg-gray-800 rounded-2xl p-6 text-gray-100" data-cat="tools">
-        <div class="flex items-center gap-3">
-          <span class="text-3xl">🐙</span>
-          <h3 class="text-xl font-bold">Git & GitHub</h3>
-        </div>
-        <!-- <p class="text-gray-300 mt-2">3 years</p> -->
-        <div class="h-1 w-full mt-4 rounded" style="background:linear-gradient(90deg,#a855f7,#6ba9ff)"></div>
-      </article>
-  
-      <article class="skill-card bg-gray-800 rounded-2xl p-6 text-gray-100" data-cat="databases">
-        <div class="flex items-center gap-3">
-          <span class="text-3xl">🪶</span>
-          <h3 class="text-xl font-bold">Assembly</h3>
-        </div>
-        <!-- <p class="text-gray-300 mt-2">2 years</p> -->
-        <div class="h-1 w-full mt-4 rounded" style="background:linear-gradient(90deg,#a855f7,#6ba9ff)"></div>
-      </article>
-    </div>
-  </section>
-  
-  <!-- Minimal styles for chips (Tailwind v2 can't @apply inlined here, so keep simple classes above) -->
-  
-  <!-- Tiny filter script -->
+  </footer>
+
+  <!-- Filter script -->
   <script>
     const chips = document.querySelectorAll('.chip[data-filter]');
     const cards = document.querySelectorAll('.skill-card');
-  
+
     function setActiveChip(active) {
-      chips.forEach(c => {
-        const isActive = c === active;
-        c.classList.toggle('bg-purple-600', isActive);
-        c.classList.toggle('text-white', isActive);
-        c.classList.toggle('bg-gray-800', !isActive);
-        c.classList.toggle('text-gray-200', !isActive);
-      });
+      chips.forEach(c => c.classList.toggle('chip-active', c === active));
     }
-  
+
     chips.forEach(chip => {
       chip.addEventListener('click', () => {
         setActiveChip(chip);
@@ -163,15 +164,6 @@
       });
     });
   </script>
-  
-
-  </main>
-
-  <footer class="bg-white p-6 mt-12 shadow-inner">
-    <div class="container mx-auto">
-      <p>&copy; 2025 My Website</p>
-    </div>
-  </footer>
 
 </body>
 </html>
