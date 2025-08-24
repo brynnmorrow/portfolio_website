@@ -58,33 +58,42 @@
 
       <style>
         .typing {
-          overflow: hidden;
-          border-right: .15em solid black;
-          white-space: nowrap;
-          animation: typing 8s steps(26, end), blink .5s step-end infinite;
-          font-size: 2rem;
-          font-family: 'Georgia', serif;
-          font-weight: bold;
+          overflow:hidden;
+          border-right:.15em solid black;
+          white-space:nowrap;
+          display:inline-block;                            /* required for width animation */
+          font-size:2rem; font-family:'Georgia', serif; font-weight:bold;
+          animation: typing 8s steps(26, end) forwards, blink .5s step-end infinite;
         }
-        @keyframes typing {
-          from { width: 0 }
-          to { width: 26ch }
-        }
-        @keyframes blink {
-          50% { border-color: transparent }
-        }
-        </style>
-        
-        <p class="typing">Hello, I'm Brynn Morrow...</p>
+        @keyframes typing { to { width: var(--target-width); } }
+        @keyframes blink { 50% { border-color: transparent } }
+      </style>
+      
+      <p class="typing"><span id="typingText">Hello, I'm Brynn Morrow...</span></p>
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const text = document.getElementById('typingText');
+          const wrapper = text.parentElement;
+          // Measure the exact rendered width of the text in the current font
+          const w = text.offsetWidth;               // px
+          wrapper.style.setProperty('--target-width', w + 'px');
+        });
+      </script>
+      
         
       <!-- <h2 class="text-2xl font-semibold mb-4">Hello, I'm Brynn Morrow!</h2> -->
 
       <div class="flex items-center space-x-6">
-        <img src="images/BrynnMorrow.jpeg" alt="Brynn Morrow" class="w-48 h-48 object-cover rounded-full shadow-md">
-        
-      <p>I am currently a student at the University of Minnesota - Twin Cities with an 
-        expected graduation of May 2026 with a Bachelor of Science in Computer Science.</p>
+        <img src="images/BrynnMorrow.jpeg" alt="Brynn Morrow"
+             class="w-48 h-48 object-cover rounded-full shadow-md">
+      
+        <p class="text-lg md:text-xl leading-relaxed">
+          I am currently a student at the University of Minnesota - Twin Cities with an
+          expected graduation of May 2026 with a Bachelor of Science in Computer Science.
+        </p>
       </div>
+      
 
     </section>
 
