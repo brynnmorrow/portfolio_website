@@ -56,13 +56,15 @@
   <main class="container mx-auto my-12 p-6 bg-white rounded shadow">
     <section class="mb-8">
 
-      <style>
+      <!-- <style>
         .typing {
           overflow:hidden;
           border-right:.15em solid black;
           white-space:nowrap;
           display:inline-block;                            /* required for width animation */
-          font-size:2rem; font-family:'Georgia', serif; font-weight:bold;
+          font-size:2rem;
+          font-family:'Georgia', serif;
+          font-weight:bold;
           animation: typing 8s steps(26, end) forwards, blink .5s step-end infinite;
         }
         @keyframes typing { to { width: var(--target-width); } }
@@ -79,7 +81,62 @@
           const w = text.offsetWidth;               // px
           wrapper.style.setProperty('--target-width', w + 'px');
         });
-      </script>
+      </script> -->
+
+      <!-- HTML -->
+<p id="typeTarget" class="typewriter"></p>
+
+<!-- CSS -->
+<style>
+  .typewriter{
+    display:inline-block;
+    font:bold 2rem Georgia, serif;        /* your font/size */
+    white-space:nowrap;
+  }
+  .typewriter::after{
+    content:"";
+    display:inline-block;
+    width:.12em; height:1em;
+    background:black; margin-left:2px;
+    animation: blink 1s step-end infinite;
+    vertical-align:-0.15em;
+  }
+  @keyframes blink { 50% { opacity:0 } }
+</style>
+
+<!-- JS -->
+<script>
+  function typewriter(el, text, speed = 70) {
+    let i = 0;
+    (function tick(){
+      el.textContent = text.slice(0, i++);
+      if (i <= text.length) setTimeout(tick, speed);
+    })();
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const el = document.getElementById('typeTarget');
+    typewriter(el, "Hello, I'm Brynn Morrow...", 70);  // adjust speed here
+  });
+</script>
+
+<script>
+  function loopTypewriter(el, text, typeMs = 70, pauseMs = 1200, eraseMs = 40){
+    let i = 0, dir = 1; // 1 = typing, -1 = erasing
+    function tick(){
+      el.textContent = text.slice(0, i);
+      if (dir === 1 && i < text.length) { i++; setTimeout(tick, typeMs); }
+      else if (dir === 1) { dir = -1; setTimeout(tick, pauseMs); }
+      else if (dir === -1 && i > 0) { i--; setTimeout(tick, eraseMs); }
+      else { dir = 1; setTimeout(tick, 400); }
+    }
+    tick();
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    loopTypewriter(document.getElementById('typeTarget'), "Hello, I'm Brynn Morrow...");
+  });
+</script>
+
       
         
       <!-- <h2 class="text-2xl font-semibold mb-4">Hello, I'm Brynn Morrow!</h2> -->
