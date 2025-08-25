@@ -38,14 +38,14 @@
       padding:.5rem 1rem; border-radius:9999px;
       font-weight:600; font-size:.9rem;
       /* font-family: 'Georgia', serif; */
-      background:#38393b; color:#e5e7eb;
+      background:#a4a5a8; color:#e5e7eb;
       transition:background-color .2s, color .2s, box-shadow .2s;
     }
     .chip:hover{ background:#65676a; }
     .chip-active{ background:var(--brand); color:#0b1220; box-shadow:0 6px 18px rgba(107,169,255,.35); }
 
     /* Skill cards */
-    .skill-card{ background:#38393b; color:#e5e7eb; }
+    .skill-card{ background:#a4a5a8; color:#e5e7eb; }
     .skill-card h3{ color:var(--brand); }
     .accent{ height:4px; width:100%; border-radius:.5rem; background:linear-gradient(90deg,var(--brand-2),var(--brand)); }
   </style>
@@ -84,9 +84,8 @@
       <div class="flex flex-wrap gap-3 justify-center mb-8">
         <button class="chip chip-active" data-filter="all">✨ All</button>
         <button class="chip" data-filter="languages">🗣 Languages</button>
-        <button class="chip" data-filter="frameworks">🛠 Frameworks</button>
-        <button class="chip" data-filter="databases">🗂 Databases</button>
-        <button class="chip" data-filter="tools">🔧 Tools</button>
+        <button class="chip" data-filter="software">🛠 Software</button>
+        <button class="chip" data-filter="libraries">🗂 Libraries</button>
       </div>
 
       <!-- Responsive grid -->
@@ -109,6 +108,14 @@
         </article>
 
         <article class="skill-card rounded-2xl p-6" data-cat="languages">
+        <div class="flex items-center gap-3">
+            <span class="text-3xl" style="color:var(--brand)">☕️</span>
+            <h3 class="text-xl font-bold">JavaScript</h3>
+        </div>
+        <div class="accent mt-4"></div>
+        </article>
+
+        <article class="skill-card rounded-2xl p-6" data-cat="languages">
           <div class="flex items-center gap-3">
             <span class="text-3xl" style="color:var(--brand)">🧩</span>
             <h3 class="text-xl font-bold">C</h3>
@@ -116,29 +123,119 @@
           <div class="accent mt-4"></div>
         </article>
 
-        <article class="skill-card rounded-2xl p-6" data-cat="frameworks">
-          <div class="flex items-center gap-3">
-            <span class="text-3xl" style="color:var(--brand)">⚛️</span>
-            <h3 class="text-xl font-bold">React</h3>
-          </div>
-          <div class="accent mt-4"></div>
-        </article>
-
-        <article class="skill-card rounded-2xl p-6" data-cat="tools">
-          <div class="flex items-center gap-3">
-            <span class="text-3xl" style="color:var(--brand)">🐙</span>
-            <h3 class="text-xl font-bold">Git & GitHub</h3>
-          </div>
-          <div class="accent mt-4"></div>
+        <article class="skill-card rounded-2xl p-6" data-cat="languages">
+        <div class="flex items-center gap-3">
+            <span class="text-3xl" style="color:var(--brand)">🧩</span>
+            <h3 class="text-xl font-bold">Assembly</h3>
+        </div>
+        <div class="accent mt-4"></div>
         </article>
 
         <article class="skill-card rounded-2xl p-6" data-cat="languages">
+        <div class="flex items-center gap-3">
+            <span class="text-3xl" style="color:var(--brand)">🧩</span>
+            <h3 class="text-xl font-bold">LaTex</h3>
+        </div>
+        <div class="accent mt-4"></div>
+        </article>
+
+        <article class="skill-card rounded-2xl p-6" data-cat="languages">
+        <div class="flex items-center gap-3">
+            <span class="text-3xl" style="color:var(--brand)">🧩</span>
+            <h3 class="text-xl font-bold">R</h3>
+        </div>
+        <div class="accent mt-4"></div>
+        </article>
+
+        <article class="skill-card rounded-2xl p-6" data-cat="software">
           <div class="flex items-center gap-3">
-            <span class="text-3xl" style="color:var(--brand)">🪶</span>
-            <h3 class="text-xl font-bold">Assembly</h3>
+            <span class="text-3xl" style="color:var(--brand)">⚛️</span>
+            <h3 class="text-xl font-bold">Visual Studio Code</h3>
           </div>
           <div class="accent mt-4"></div>
         </article>
+
+        <article class="skill-card rounded-2xl p-6" data-cat="software">
+        <div class="flex items-center gap-3">
+            <span class="text-3xl" style="color:var(--brand)">⚛️</span>
+            <h3 class="text-xl font-bold">Gradle</h3>
+        </div>
+        <div class="accent mt-4"></div>
+        </article>
+
+        <article class="skill-card rounded-2xl p-6" data-cat="software">
+        <div class="flex items-center gap-3">
+            <span class="text-3xl" style="color:var(--brand)">⚛️</span>
+            <h3 class="text-xl font-bold">IntelliJ</h3>
+        </div>
+        <div class="accent mt-4"></div>
+        </article>
+
+        <article class="skill-card rounded-2xl p-6" data-cat="software">
+        <div class="flex items-center gap-3">
+            <span class="text-3xl" style="color:var(--brand)">⚛️</span>
+            <h3 class="text-xl font-bold">Git</h3>
+        </div>
+        <div class="accent mt-4"></div>
+        </article>
+
+        <article class="skill-card rounded-2xl p-6" data-cat="software">
+        <div class="flex items-center gap-3">
+            <span class="text-3xl" style="color:var(--brand)">⚛️</span>
+            <h3 class="text-xl font-bold">GitHub</h3>
+        </div>
+        <div class="accent mt-4"></div>
+        </article>
+
+        <article class="skill-card rounded-2xl p-6" data-cat="software">
+        <div class="flex items-center gap-3">
+            <span class="text-3xl" style="color:var(--brand)">⚛️</span>
+            <h3 class="text-xl font-bold">GDB</h3>
+        </div>
+        <div class="accent mt-4"></div>
+        </article>
+
+        <article class="skill-card rounded-2xl p-6" data-cat="software">
+        <div class="flex items-center gap-3">
+            <span class="text-3xl" style="color:var(--brand)">⚛️</span>
+            <h3 class="text-xl font-bold">RStudio</h3>
+        </div>
+        <div class="accent mt-4"></div>
+        </article>
+
+        <article class="skill-card rounded-2xl p-6" data-cat="software">
+        <div class="flex items-center gap-3">
+            <span class="text-3xl" style="color:var(--brand)">⚛️</span>
+            <h3 class="text-xl font-bold">ArcGIS</h3>
+        </div>
+        <div class="accent mt-4"></div>
+        </article>
+
+        <article class="skill-card rounded-2xl p-6" data-cat="libraries">
+          <div class="flex items-center gap-3">
+            <span class="text-3xl" style="color:var(--brand)">🐙</span>
+            <h3 class="text-xl font-bold">JUnit</h3>
+          </div>
+          <div class="accent mt-4"></div>
+        </article>
+
+        <article class="skill-card rounded-2xl p-6" data-cat="libraries">
+        <div class="flex items-center gap-3">
+            <span class="text-3xl" style="color:var(--brand)">🐙</span>
+            <h3 class="text-xl font-bold">Mockito</h3>
+        </div>
+        <div class="accent mt-4"></div>
+        </article>
+
+        <article class="skill-card rounded-2xl p-6" data-cat="libraries">
+        <div class="flex items-center gap-3">
+            <span class="text-3xl" style="color:var(--brand)">🐙</span>
+            <h3 class="text-xl font-bold">JaCoCo</h3>
+        </div>
+        <div class="accent mt-4"></div>
+        </article>
+
+       
       </div>
     </section>
   </main>
