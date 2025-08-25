@@ -106,7 +106,7 @@
 
 <!-- JS -->
 <script>
-  function typewriter(el, text, speed = 70) {
+  function typewriter(el, text, speed = 100) {
     let i = 0;
     (function tick(){
       el.textContent = text.slice(0, i++);
@@ -116,12 +116,12 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     const el = document.getElementById('typeTarget');
-    typewriter(el, "Hello, I'm Brynn Morrow...", 70);  // adjust speed here
+    typewriter(el, "Hello, I'm Brynn Morrow...", 100);  // adjust speed here
   });
 </script>
 
 <script>
-  function loopTypewriter(el, text, typeMs = 70, pauseMs = 1200, eraseMs = 40){
+  function loopTypewriter(el, text, typeMs = 100, pauseMs = 1200, eraseMs = 40){
     let i = 0, dir = 1; // 1 = typing, -1 = erasing
     function tick(){
       el.textContent = text.slice(0, i);
