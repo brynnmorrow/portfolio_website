@@ -37,15 +37,15 @@
       display:inline-flex; align-items:center; gap:.5rem;
       padding:.5rem 1rem; border-radius:9999px;
       font-weight:600; font-size:.9rem;
-      /* font-family: 'Georgia', serif; */
-      background:#a4a5a8; color:#e5e7eb;
+      font-family: 'Georgia', serif;
+      background:#65676a; color:#e5e7eb;
       transition:background-color .2s, color .2s, box-shadow .2s;
     }
-    .chip:hover{ background:#65676a; }
+    .chip:hover{ background:#a4a5a8; }
     .chip-active{ background:var(--brand); color:#0b1220; box-shadow:0 6px 18px rgba(107,169,255,.35); }
 
     /* Skill cards */
-    .skill-card{ background:#a4a5a8; color:#e5e7eb; }
+    .skill-card{ background:#65676a; color:#e5e7eb; }
     .skill-card h3{ color:var(--brand); }
     .accent{ height:4px; width:100%; border-radius:.5rem; background:linear-gradient(90deg,var(--brand-2),var(--brand)); }
   </style>
@@ -83,8 +83,8 @@
       <!-- Category chips -->
       <div class="flex flex-wrap gap-3 justify-center mb-8">
         <button class="chip chip-active" data-filter="all">✨ All</button>
-        <button class="chip" data-filter="languages">🗣 Languages</button>
-        <button class="chip" data-filter="software">🛠 Software</button>
+        <button class="chip" data-filter="languages">🔊 Languages</button>
+        <button class="chip" data-filter="software">⚙ Software</button>
         <button class="chip" data-filter="libraries">🗂 Libraries</button>
       </div>
 
@@ -93,11 +93,15 @@
         <!-- Card -->
         <article class="skill-card rounded-2xl p-6" data-cat="languages">
           <div class="flex items-center gap-3">
-            <span class="text-3xl" style="color:var(--brand)">🐍</span>
+            
+            <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900">
+                <img src="https://cdn.simpleicons.org/amazonaws/6ba9ff" alt="AWS" class="w-7 h-7">
+            
             <h3 class="text-xl font-bold">Python</h3>
-          </div>
+        </div>
           <div class="accent mt-4"></div>
         </article>
+
 
         <article class="skill-card rounded-2xl p-6" data-cat="languages">
           <div class="flex items-center gap-3">
