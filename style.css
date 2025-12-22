@@ -39,6 +39,38 @@
   .btn-secondary:hover {
     background-color: #e5e5e5;
   }
+
+  /* Chips */
+.chip {
+    padding: 0.55rem 1rem;
+    border-radius: 9999px;
+    border: 1px solid #e5e7eb;          /* gray-200 */
+    background: #ffffff;
+    color: #111827;                      /* gray-900 */
+    font-weight: 600;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  }
+  
+  .chip:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    border-color: #cbd5e1;              /* slate-300 */
+  }
+  
+  /* Active chip (highlighted) */
+  .chip-active {
+    background: linear-gradient(90deg, #2563eb, #38bdf8);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25);
+  }
+  
+  /* Keyboard accessibility */
+  .chip:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.35);
+  }
+  
   
   /* Icons */
   .icon-link {
@@ -98,4 +130,24 @@
     vertical-align: -0.15em;
   }
   @keyframes blink { 50% { opacity: 0; } }
+  
+
+  /* Skill cards */
+.skill-card {
+    border: 1px solid #eef2ff; /* light blue-gray */
+    background: #ffffff;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.10);
+  }
+  
+  .accent {
+    height: 4px;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, #2563eb, #38bdf8);
+  }
   
