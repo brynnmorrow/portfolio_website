@@ -18,7 +18,7 @@ function loopTypewriter(el, text, typeMs = 85, pauseMs = 1200, eraseMs = 35) {
   document.addEventListener("DOMContentLoaded", () => {
     const el = document.getElementById("typeTarget");
     if (el) {
-      loopTypewriter(el, "Hello, I'm Brynn Morrow — CS + GIS for environmental impact.");
+      loopTypewriter(el, "Hello, I'm Brynn Morrow...");
     }
   
     const y = document.getElementById("year");
