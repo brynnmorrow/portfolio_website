@@ -1,214 +1,127 @@
 <!DOCTYPE html>
-<!-- Root element that wraps everything -->
 <html lang="en">
-
-<!-- Contains metadata (not shown on page) like title, CSS links -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brynn Morrow - Portfolio</title> <!-- Title shown in brower tab -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link rel="stylesheet" href="style.css"> <!-- Optional CSS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brynn Morrow – Portfolio</title>
+
+  <!-- Tailwind -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<!-- Everything user sees on screen -->
 <body class="bg-gray-100 text-gray-900">
 
-  <header class="bg-white shadow p-6">
-    <div class="container mx-auto flex items-center justify-between">
+  <!-- HEADER -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto px-6 py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
       <h1 class="text-3xl font-bold">
-        <style>
-          .custom-text {
-          color: #428df7;
-          transition: color 0.2s;
-      }
-      .custom-text:hover {
-          color: #48dbfb; /* hover color */
-      }
-      </style>
-      
-      <span class="custom-text">Brynn Morrow</span>
+        <a href="index.html" class="custom-text">Brynn Morrow</a>
+      </h1>
 
-      <nav class="flex justify-evenly w-full">
-        <a href="index.html" class="text-neutral-700 text-xl hover:text-neutral-500 transition-colors duration-200">
-          Home
-        </a>
-        <a href="projects.html" class="text-neutral-700 text-xl hover:text-neutral-500 transition-colors duration-200">
-          Projects
-        </a>
-        <a href="skills.html" class="text-neutral-700 text-xl hover:text-neutral-500 transition-colors duration-200">
-          Skills
-        </a>
-        <a href="experience.html" class="text-neutral-700 text-xl hover:text-neutral-500 transition-colors duration-200">
-          Experience
-        </a>
-        <a href="education.html" class="text-neutral-700 text-xl hover:text-neutral-500 transition-colors duration-200">
-          Education
-        </a>
-        <a href="contact.html" class="text-neutral-700 text-xl hover:text-neutral-500 transition-colors duration-200">
-          Contact
-        </a>
-      </nav>      
+      <nav class="flex flex-wrap gap-x-6 gap-y-2 text-lg">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="education.html" class="nav-link">Education</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
     </div>
   </header>
 
+  <!-- MAIN -->
   <main class="container mx-auto my-12 p-6 bg-white rounded shadow">
-    <section class="mb-8">
 
-      <!-- <style>
-        .typing {
-          overflow:hidden;
-          border-right:.15em solid black;
-          white-space:nowrap;
-          display:inline-block;                            /* required for width animation */
-          font-size:2rem;
-          font-family:'Georgia', serif;
-          font-weight:bold;
-          animation: typing 8s steps(26, end) forwards, blink .5s step-end infinite;
-        }
-        @keyframes typing { to { width: var(--target-width); } }
-        @keyframes blink { 50% { border-color: transparent } }
-      </style>
-      
-      <p class="typing"><span id="typingText">Hello, I'm Brynn Morrow...</span></p>
-      
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          const text = document.getElementById('typingText');
-          const wrapper = text.parentElement;
-          // Measure the exact rendered width of the text in the current font
-          const w = text.offsetWidth;               // px
-          wrapper.style.setProperty('--target-width', w + 'px');
-        });
-      </script> -->
+    <!-- HERO -->
+    <section class="mb-10">
+      <p id="typeTarget" class="typewriter"></p>
 
-      <!-- HTML -->
-<p id="typeTarget" class="typewriter"></p>
+      <div class="mt-6 flex flex-col md:flex-row items-start md:items-center gap-6">
+        <img src="images/BrynnMorrow.jpeg"
+             alt="Brynn Morrow"
+             class="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full shadow-md">
 
-<!-- CSS -->
-<style>
-  .typewriter{
-    display:inline-block;
-    font:bold 2rem Georgia, serif;        /* your font/size */
-    white-space:nowrap;
-  }
-  .typewriter::after{
-    content:"";
-    display:inline-block;
-    width:.12em; height:1em;
-    background:black; margin-left:2px;
-    animation: blink 1s step-end infinite;
-    vertical-align:-0.15em;
-  }
-  @keyframes blink { 50% { opacity:0 } }
-</style>
+        <div class="space-y-4">
+          <p class="text-lg md:text-xl leading-relaxed">
+            I’m a Computer Science major and GIS minor at the University of Minnesota,
+            graduating Spring 2026. I’m most interested in environmental science and
+            conservation—using spatial analysis and software to create work I’m proud of.
+          </p>
 
-<!-- JS -->
-<script>
-  function typewriter(el, text, speed = 100) {
-    let i = 0;
-    (function tick(){
-      el.textContent = text.slice(0, i++);
-      if (i <= text.length) setTimeout(tick, speed);
-    })();
-  }
+          <div class="flex flex-wrap gap-3">
+            <a href="projects.html"
+               class="btn-primary">
+              View Projects
+            </a>
+            <a href="contact.html"
+               class="btn-secondary">
+              Contact
+            </a>
+          </div>
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const el = document.getElementById('typeTarget');
-    typewriter(el, "Hello, I'm Brynn Morrow...", 100);  // adjust speed here
-  });
-</script>
+          <!-- SOCIAL LINKS -->
+          <div class="flex items-center gap-4 pt-2">
+            <a href="https://www.linkedin.com/in/brynn-morrow/"
+               target="_blank" rel="noopener noreferrer"
+               class="icon-link" title="LinkedIn">
+              <!-- LinkedIn SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                   fill="currentColor" class="w-6 h-6">
+                <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1a53.79
+                  53.79 0 1 1 0-107.58 53.79 53.79 0 0 1 0 107.58zM447.9
+                  448h-92.68V302.4c0-34.7-.7-79.3-48.28-79.3-48.4
+                  0-55.8 37.8-55.8 76.8V448h-92.7V148.9h89v40.8h1.3
+                  c12.4-23.5 42.8-48.3 88-48.3 94 0 111.2 61.9
+                  111.2 142.3V448z"/>
+              </svg>
+            </a>
 
-<script>
-  function loopTypewriter(el, text, typeMs = 100, pauseMs = 1200, eraseMs = 40){
-    let i = 0, dir = 1; // 1 = typing, -1 = erasing
-    function tick(){
-      el.textContent = text.slice(0, i);
-      if (dir === 1 && i < text.length) { i++; setTimeout(tick, typeMs); }
-      else if (dir === 1) { dir = -1; setTimeout(tick, pauseMs); }
-      else if (dir === -1 && i > 0) { i--; setTimeout(tick, eraseMs); }
-      else { dir = 1; setTimeout(tick, 400); }
-    }
-    tick();
-  }
-  document.addEventListener('DOMContentLoaded', () => {
-    loopTypewriter(document.getElementById('typeTarget'), "Hello, I'm Brynn Morrow...");
-  });
-</script>
+            <a href="https://github.com/brynnmorrow"
+               target="_blank" rel="noopener noreferrer"
+               class="icon-link" title="GitHub">
+              <!-- GitHub SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                   fill="currentColor" class="w-6 h-6">
+                <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008
+                  11c.6.1.8-.3.8-.6v-2.3c-3.3.7-4-1.5-4-1.5
+                  -.6-1.6-1.4-2-1.4-2-1.2-.8.1-.8.1-.8
+                  1.3.1 2 1.4 2 1.4 1.2 2 3 1.4 3.7
+                  1 .1-.9.5-1.4.8-1.7-2.7-.3-5.6
+                  -1.3-5.6-6a4.7 4.7 0 011.2-3.2 4.4
+                  4.4 0 01.1-3.1s1-.3 3.3 1.3a11.4
+                  11.4 0 016 0c2.3-1.6 3.3-1.3
+                  3.3-1.3a4.4 4.4 0 01.1 3.1 4.7
+                  4.7 0 011.2 3.2c0 4.7-2.9
+                  5.6-5.7 5.9.5.4.9 1.1.9
+                  2.3v3.3c0 .3.2.6.8.6A11.5
+                  11.5 0 0023.5 12C23.5
+                  5.65 18.35.5 12 .5z"/>
+              </svg>
+            </a>
 
-      
-        
-      <!-- <h2 class="text-2xl font-semibold mb-4">Hello, I'm Brynn Morrow!</h2> -->
-
-      <div class="flex items-center space-x-6">
-        <img src="images/BrynnMorrow.jpeg" alt="Brynn Morrow"
-             class="w-48 h-48 object-cover rounded-full shadow-md">
-      
-        <p class="text-lg md:text-xl leading-relaxed">
-          I am a student at the University of Minnesota - Twin Cities with an
-          expected graduation of May 2026 with a Bachelor of Science in Computer Science.
-        </p>
-      </div>
-      
-
-    </section>
-
-    <!-- <section>
-      <h2 class="text-2xl font-semibold mb-4">Projects</h2>
-      <ul class="list-disc pl-5 space-y-2">
-        <li>Project One</li>
-        <li>Project Two</li>
-        <li>Project Three</li>
-      </ul>
-    </section> -->
-
-    <section>
-      <h2 class="text-2xl font-semibold mb-4">Contact Information</h2>
-      <div class="flex items-center space-x-4 mb-8">
-        <!-- LINKEDIN -->
-        <a href="https://www.linkedin.com/in/brynn-morrow/" 
-            class="text-blue-600 hover:text-blue-800 w-8 h-8 flex items-center justify-center" 
-            target="_blank" rel="noopener noreferrer"
-            title="LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" class="w-full h-full">
-            <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341a53.9 53.9 0 1 1 0-107.8 53.9 53.9 0 0 1 0 107.8zM447.9 448h-92.68V302.4c0-34.7-.7-79.3-48.28-79.3-48.4 0-55.8 37.8-55.8 76.8V448h-92.7V148.9h89v40.8h1.3c12.4-23.5 42.8-48.3 88-48.3 94 0 111.2 61.9 111.2 142.3V448z"/>
-          </svg>
-        </a>
-        <!-- GITHUB -->
-        <a href="https://github.com/brynnmorrow" 
-   class="text-blue-600 hover:text-blue-950 w-8 h-8 flex items-center justify-center" 
-   target="_blank" rel="noopener noreferrer"
-   title="GitHub">
-
-  <!-- GITHUB SVG ICON -->
-  <svg xmlns="http://www.w3.org/2000/svg" 
-       viewBox="0 0 24 24" 
-       fill="currentColor" 
-       class="w-full h-full relative -top-0.5">
-    <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008 11c.6.1.8-.3.8-.6v-2.3
-      c-3.3.7-4-1.5-4-1.5-.6-1.6-1.4-2-1.4-2-1.2-.8.1-.8.1-.8 1.3.1 2 1.4 2 
-      1.4 1.2 2 3 1.4 3.7 1 .1-.9.5-1.4.8-1.7-2.7-.3-5.6-1.3-5.6-6a4.7 
-      4.7 0 011.2-3.2 4.4 4.4 0 01.1-3.1s1-.3 3.3 1.3a11.4 11.4 0 016 
-      0C17 5.6 18 5.9 18 5.9a4.4 4.4 0 01.1 3.1 4.7 4.7 0 011.2 3.2c0 
-      4.7-2.9 5.6-5.7 5.9.5.4.9 1.1.9 2.3v3.3c0 .3.2.6.8.6A11.5 11.5 
-      0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/>
-  </svg>
-</a>
-
-
+            <a href="BrynnMorrow_Resume2025.pdf"
+               class="text-neutral-700 hover:text-neutral-900 underline">
+              Resume (PDF)
+            </a>
+          </div>
+        </div>
       </div>
     </section>
-
-  
-
-
   </main>
 
+  <!-- FOOTER -->
   <footer class="bg-white p-6 mt-12 shadow-inner">
-    <div class="container mx-auto">
-      <p>&copy; 2025 My Website</p>
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <p>&copy; <span id="year"></span> Brynn Morrow</p>
+      <p class="text-sm text-neutral-500">CS + GIS • Environmental Focus</p>
     </div>
   </footer>
 
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>
