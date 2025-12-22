@@ -3,53 +3,39 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brynn Morrow - Portfolio</title> <!-- Title shown in browser tab -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link rel="stylesheet" href="style.css"> <!-- Optional CSS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brynn Morrow – Portfolio</title>
 
-  <!-- Additions: brand color, chip + card styles -->
-  <style>
-    :root{
-      --brand:#428df7;
-      --brand-2:#48dbfb;       /* secondary accent for gradient */
-    }
+  <!-- Tailwind -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 
-    /* Header name color */
-    .custom-text { color:#428df7; transition: color 0.2s; }
-    .custom-text:hover { color:#48dbfb; }
-
-    /* Animated "Skills" heading */
-    @keyframes glow {
-      0%, 100% { color: #428df7; }
-      50% { color: #48dbfb; }
-    }
-    .animated-text {
-      animation: glow 3s infinite;
-      font-size: 2.5rem;
-      font-family: 'Georgia', serif;
-      font-weight: bold;
-    }
-
-    /* Category chips */
-    .chip{
-      display:inline-flex; align-items:center; gap:.5rem;
-      padding:.5rem 1rem; border-radius:9999px;
-      font-weight:600; font-size:.9rem;
-      font-family: 'Georgia', serif;
-      background:#626870; color:#e5e7eb;
-      transition:background-color .2s, color .2s, box-shadow .2s;
-    }
-    .chip:hover{ background:#a4a5a8; }
-    .chip-active{ background:var(--brand); color:#0b1220; box-shadow:0 6px 18px rgba(76, 180, 241, 0.894); }
-
-    /* Skill cards */
-    .skill-card{ background:#9ca9bb; color:#e5e7eb; }
-    .skill-card h3{ color:var(--brand); }
-    .accent{ height:4px; width:100%; border-radius:.5rem; background:linear-gradient(90deg,var(--brand-2),var(--brand)); }
-  </style>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto px-6 py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <h1 class="text-3xl font-bold">
+        <a href="index.html" class="custom-text">
+          Brynn Morrow
+        </a>
+      </h1>
+
+      <nav class="flex flex-wrap gap-x-6 gap-y-2 text-lg">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="education.html" class="nav-link">Education</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
 
 <body class="bg-gray-100 text-gray-900">
 
