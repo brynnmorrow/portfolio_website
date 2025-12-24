@@ -245,4 +245,14 @@
     white-space: nowrap; /* prevents wrapping */
   }
   
+  @media (max-width: 640px){
+    .exp-role-row{
+      grid-template-columns: 1fr;
+      row-gap: 0.5rem;
+    }
+    .exp-role-dates{
+      text-align: left;
+    }
+  }
+  
   
