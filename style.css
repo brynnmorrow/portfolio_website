@@ -1,3 +1,7 @@
+/* =========================
+   HEADER & NAV
+   ========================= */
+
 /* Name hover */
 .custom-text {
     color: #428df7;
@@ -16,7 +20,10 @@
     color: #737373;
   }
   
-  /* Buttons */
+  /* =========================
+     BUTTONS
+     ========================= */
+  
   .btn-primary {
     background-color: #2563eb;
     color: white;
@@ -39,14 +46,17 @@
   .btn-secondary:hover {
     background-color: #e5e5e5;
   }
-
-  /* Chips */
-.chip {
+  
+  /* =========================
+     CHIPS (SKILLS FILTER)
+     ========================= */
+  
+  .chip {
     padding: 0.55rem 1rem;
     border-radius: 9999px;
-    border: 1px solid #e5e7eb;          /* gray-200 */
+    border: 1px solid #e5e7eb;
     background: #ffffff;
-    color: #111827;                      /* gray-900 */
+    color: #111827;
     font-weight: 600;
     transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, border-color 0.15s ease;
   }
@@ -54,10 +64,9 @@
   .chip:hover {
     transform: translateY(-1px);
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    border-color: #cbd5e1;              /* slate-300 */
+    border-color: #cbd5e1;
   }
   
-  /* Active chip (highlighted) */
   .chip-active {
     background: linear-gradient(90deg, #2563eb, #38bdf8);
     color: white;
@@ -65,14 +74,15 @@
     box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25);
   }
   
-  /* Keyboard accessibility */
   .chip:focus {
     outline: none;
     box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.35);
   }
   
+  /* =========================
+     ICON LINKS
+     ========================= */
   
-  /* Icons */
   .icon-link {
     color: #2563eb;
     transition: color 0.2s;
@@ -80,22 +90,23 @@
   .icon-link:hover {
     color: #1e3a8a;
   }
-
-  /* Animated gradient page titles */
+  
+  /* =========================
+     PAGE TITLES
+     ========================= */
+  
   .animated-text {
-    font-size: 2.0rem;
+    font-size: 2rem;
     font-weight: 800;
-
     text-align: left;
   
     background: linear-gradient(
-        270deg,
-        #1e3a8a,
-        #2563eb,
-        #38bdf8,
-        #1e3a8a
+      270deg,
+      #1e3a8a,
+      #2563eb,
+      #38bdf8,
+      #1e3a8a
     );
-
     background-size: 600% 600%;
   
     -webkit-background-clip: text;
@@ -106,14 +117,16 @@
     animation: gradientShift 10s ease infinite;
   }
   
-  /* Animation */
   @keyframes gradientShift {
-    0%   { background-position:   0% 50%; }
+    0%   { background-position: 0% 50%; }
     50%  { background-position: 100% 50%; }
-    100% { background-position:   0% 50%; }
-  }  
+    100% { background-position: 0% 50%; }
+  }
   
-  /* Typewriter */
+  /* =========================
+     TYPEWRITER
+     ========================= */
+  
   .typewriter {
     display: inline-block;
     font: bold 2rem Georgia, serif;
@@ -129,12 +142,16 @@
     animation: blink 1s step-end infinite;
     vertical-align: -0.15em;
   }
-  @keyframes blink { 50% { opacity: 0; } }
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
   
-
-  /* Skill cards */
-.skill-card {
-    border: 1px solid #eef2ff; /* light blue-gray */
+  /* =========================
+     SKILLS CARDS
+     ========================= */
+  
+  .skill-card {
+    border: 1px solid #eef2ff;
     background: #ffffff;
     box-shadow: 0 10px 24px rgba(0,0,0,0.06);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -150,40 +167,59 @@
     border-radius: 9999px;
     background: linear-gradient(90deg, #2563eb, #38bdf8);
   }
-
+  
   .skill-card img {
     display: block;
     max-width: 100%;
     height: auto;
   }
-
-/* Experience cards */
-.exp-card{
-    display:flex;
-    gap: 1rem;
-    background: #ffffff;
-    border: 1px solid #e5e7eb; /* gray-200 */
-    border-radius: 1rem;
-    padding: 1.25rem;
-    box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  
+  /* =========================
+     EXPERIENCE (WEBSITE + RESUME HYBRID)
+     ========================= */
+  
+  .exp-wrap {
+    margin-top: 1.5rem;
   }
   
-  .exp-bar{
+  .exp-company-head {
+    display: flex;
+    gap: 0.9rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  .exp-bar {
     width: 6px;
+    min-height: 42px;
     border-radius: 9999px;
     background: linear-gradient(180deg, #2563eb, #38bdf8);
     flex-shrink: 0;
   }
   
-  .exp-content{
-    flex: 1;
-  }
-  
-  .exp-date{
+  .exp-loc {
+    color: #6b7280;
     font-weight: 600;
-    color: #6b7280; /* gray-500 */
     font-size: 0.95rem;
+    white-space: nowrap;
   }
   
+  .exp-date {
+    color: #6b7280;
+    font-weight: 600;
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
   
+  .exp-role-block {
+    padding-left: 0.25rem;
+  }
+  
+  .exp-divider {
+    height: 2px;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, #2563eb, #38bdf8);
+    opacity: 0.18;
+    margin: 1.25rem 0;
+  }
   
