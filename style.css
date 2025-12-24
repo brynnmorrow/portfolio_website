@@ -156,5 +156,34 @@
     max-width: 100%;
     height: auto;
   }
+
+  /* Experience cards */
+.exp-card{
+    display:flex;
+    gap: 1rem;
+    background: #ffffff;
+    border: 1px solid #e5e7eb; /* gray-200 */
+    border-radius: 1rem;
+    padding: 1.25rem;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  }
+  
+  .exp-bar{
+    width: 6px;
+    border-radius: 9999px;
+    background: linear-gradient(180deg, #2563eb, #38bdf8);
+    flex-shrink: 0;
+  }
+  
+  .exp-content{
+    flex: 1;
+  }
+  
+  .exp-date{
+    font-weight: 600;
+    color: #6b7280; /* gray-500 */
+    font-size: 0.95rem;
+  }
+  
   
   
