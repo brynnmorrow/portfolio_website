@@ -1,150 +1,138 @@
 <!DOCTYPE html>
-<!-- Root element that wraps everything -->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brynn Morrow – Portfolio</title>
-  
-    <!-- Tailwind -->
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-  </head>
-  
-  <body class="bg-gray-100 text-gray-900">
-  
-    <!-- HEADER -->
-    <header class="bg-white shadow">
-      <div class="container mx-auto px-6 py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <h1 class="text-3xl font-bold">
-          <a href="index.html" class="custom-text">
-            Brynn Morrow
-          </a>
-        </h1>
-  
-        <nav class="flex flex-wrap gap-x-6 gap-y-2 text-lg">
-          <!-- <a href="index.html" class="nav-link">Home</a> -->
-          <a href="projects.html" class="nav-link">Projects</a>
-          <a href="skills.html" class="nav-link">Skills</a>
-          <a href="experience.html" class="nav-link">Experience</a>
-          <a href="education.html" class="nav-link">Education</a>
-          <a href="contact.html" class="nav-link">Contact</a>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brynn Morrow – Experience</title>
 
-<!-- Everything user sees on screen -->
+  <!-- Tailwind -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
 <body class="bg-gray-100 text-gray-900">
 
+  <!-- HEADER -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto px-6 py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <h1 class="text-3xl font-bold">
+        <a href="index.html" class="custom-text">Brynn Morrow</a>
+      </h1>
+
+      <nav class="flex flex-wrap gap-x-6 gap-y-2 text-lg">
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="education.html" class="nav-link">Education</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
   <main class="container mx-auto my-12 p-6 bg-white rounded shadow">
+
+    <!-- PAGE TITLE -->
     <section class="mb-8">
-        <h2 class="animated-text">Experience</h2>
-      </section>
-            
-        
-    <!-- EXPERIENCE LIST -->
-<!-- EXPERIENCE LIST -->
-<div class="space-y-6 mt-8">
+      <h2 class="animated-text">Experience</h2>
+    </section>
 
-  <!-- ROLE 1 -->
-  <article class="exp-card">
-    <div class="exp-bar"></div>
+    <!-- EXPERIENCE (website-styled, resume structure) -->
+    <section class="exp-wrap mt-8">
 
-    <div class="exp-content">
-      <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1">
-        <h2 class="text-2xl font-bold">Alumnae Department, University of Minnesota</h2>
-        <p class="exp-date">Spring 2025</p>
+      <!-- COMPANY HEADER -->
+      <div class="exp-company-head">
+        <div class="exp-bar"></div>
+
+        <div class="flex-1">
+          <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2">
+            <h2 class="text-2xl font-bold">
+              Alumnae Department, University of Minnesota
+            </h2>
+            <span class="exp-loc">Minneapolis, MN</span>
+          </div>
+        </div>
       </div>
 
-      <h3 class="text-xl font-semibold mb-4">Student Supervisor</h3>
+      <!-- ROLE 1 -->
+      <div class="exp-role-block">
+        <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1">
+          <h3 class="text-xl font-semibold">Student Supervisor</h3>
+          <span class="exp-date">Spring 2025</span>
+        </div>
 
-      <ul class="list-disc pl-5 space-y-2">
-        <li>Supervise and support a team of Student Engagement Representatives during calling shifts, ensuring professionalism, productivity, and adherence to Foundation standards.</li>
-        <li>Coach and mentor student callers by modeling effective outreach strategies, providing real-time feedback, and assisting with onboarding and training.</li>
-        <li>Monitor calling performance, pledge rates, and data accuracy to support engagement and fundraising goals.</li>
-        <li>Foster a collaborative, inclusive calling environment and assist in resolving challenges during shifts.</li>
-      </ul>
-    </div>
-  </article>
-
-  <!-- ROLE 2 -->
-  <article class="exp-card">
-    <div class="exp-bar"></div>
-
-    <div class="exp-content">
-      <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1">
-        <h2 class="text-2xl font-bold">Alumnae Department, University of Minnesota</h2>
-        <p class="exp-date">Feb 2025 – Present</p>
+        <ul class="list-disc pl-5 space-y-2 mt-3">
+          <li>Supervise and support a team of Student Engagement Representatives during calling shifts, ensuring professionalism, productivity, and adherence to Foundation standards.</li>
+          <li>Coach and mentor student callers by modeling effective outreach strategies, providing real-time feedback, and assisting with onboarding and training.</li>
+          <li>Monitor calling performance, pledge rates, and data accuracy to support engagement and fundraising goals.</li>
+          <li>Foster a collaborative, inclusive calling environment and assist in resolving challenges during shifts.</li>
+        </ul>
       </div>
 
-      <h3 class="text-xl font-semibold mb-4">
-        Student Engagement Representative, Lead Student Engagement Representative
-      </h3>
+      <!-- DIVIDER -->
+      <div class="exp-divider"></div>
 
-      <ul class="list-disc pl-5 space-y-2">
-        <li>Connect with alumni through calls to foster relationships and support UMN’s initiatives.</li>
-        <li>Update and maintain alumni records accurately using engagement tools and data management skills.</li>
-        <li>Build connections, encourage alumni involvement, and contribute to fundraising and engagement efforts that support UMN’s programs and initiatives.</li>
-      </ul>
-    </div>
-  </article>
+      <!-- ROLE 2 -->
+      <div class="exp-role-block">
+        <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1">
+          <h3 class="text-xl font-semibold">
+            Student Engagement Representative, Lead Student Engagement Representative
+          </h3>
+          <span class="exp-date">Feb 2025 – Present</span>
+        </div>
 
-
-</div>
-
-
+        <ul class="list-disc pl-5 space-y-2 mt-3">
+          <li>Connect with alumni through calls to foster relationships and support UMN’s initiatives.</li>
+          <li>Update and maintain alumni records accurately using engagement tools and data management skills.</li>
+          <li>Build connections, encourage alumni involvement, and contribute to fundraising and engagement efforts that support UMN’s programs and initiatives.</li>
+        </ul>
+      </div>
 
     </section>
 
-
-    <section>
+    <!-- CONTACT ICONS -->
+    <section class="mt-12">
       <h2 class="text-2xl font-semibold mb-4">Contact Information</h2>
-      <div class="flex items-center space-x-4 mb-8">
-        <!-- LINKEDIN -->
-        <a href="https://www.linkedin.com/in/brynn-morrow/" 
-            class="text-blue-600 hover:text-blue-800 w-8 h-8 flex items-center justify-center" 
-            target="_blank" rel="noopener noreferrer"
-            title="LinkedIn">
+      <div class="flex items-center space-x-4">
+        <!-- LinkedIn -->
+        <a
+          href="https://www.linkedin.com/in/brynn-morrow/"
+          class="icon-link w-8 h-8 flex items-center justify-center"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="LinkedIn"
+        >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" class="w-full h-full">
-            <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341a53.9 53.9 0 1 1 0-107.8 53.9 53.9 0 0 1 0 107.8zM447.9 448h-92.68V302.4c0-34.7-.7-79.3-48.28-79.3-48.4 0-55.8 37.8-55.8 76.8V448h-92.7V148.9h89v40.8h1.3c12.4-23.5 42.8-48.3 88-48.3 94 0 111.2 61.9 111.2 142.3V448z"/>
+            <path d="M100.28 448H7.4V148.9h92.88zM53.79 107.8C24.09 107.8 0 83.7 0 53.9S24.1 0 53.8 0c29.7 0 53.8 24.1 53.8 53.9s-24.1 53.9-53.8 53.9zM447.9 448h-92.7V302.4c0-34.7-.7-79.3-48.3-79.3-48.3 0-55.7 37.7-55.7 76.7V448h-92.7V148.9h89v40.8h1.3c12.4-23.5 42.8-48.3 88-48.3 94 0 111.1 61.9 111.1 142.3V448z"/>
           </svg>
         </a>
-        <!-- GITHUB -->
-        <a href="https://github.com/brynnmorrow" 
-   class="text-blue-600 hover:text-blue-950 w-8 h-8 flex items-center justify-center" 
-   target="_blank" rel="noopener noreferrer"
-   title="GitHub">
 
-  <!-- GITHUB SVG ICON -->
-  <svg xmlns="http://www.w3.org/2000/svg" 
-       viewBox="0 0 24 24" 
-       fill="currentColor" 
-       class="w-full h-full relative -top-0.5">
-    <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008 11c.6.1.8-.3.8-.6v-2.3
-      c-3.3.7-4-1.5-4-1.5-.6-1.6-1.4-2-1.4-2-1.2-.8.1-.8.1-.8 1.3.1 2 1.4 2 
-      1.4 1.2 2 3 1.4 3.7 1 .1-.9.5-1.4.8-1.7-2.7-.3-5.6-1.3-5.6-6a4.7 
-      4.7 0 011.2-3.2 4.4 4.4 0 01.1-3.1s1-.3 3.3 1.3a11.4 11.4 0 016 
-      0C17 5.6 18 5.9 18 5.9a4.4 4.4 0 01.1 3.1 4.7 4.7 0 011.2 3.2c0 
-      4.7-2.9 5.6-5.7 5.9.5.4.9 1.1.9 2.3v3.3c0 .3.2.6.8.6A11.5 11.5 
-      0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/>
-  </svg>
-</a>
-
-
+        <!-- GitHub -->
+        <a
+          href="https://github.com/brynnmorrow"
+          class="icon-link w-8 h-8 flex items-center justify-center"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="GitHub"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full">
+            <path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 11 .6.1.8-.3.8-.6v-2.3c-3.2.7-3.9-1.5-3.9-1.5-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.3 1.2.9-.3 1.9-.4 2.9-.4s2 .1 2.9.4c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 3 .1 3.3.8.8 1.2 1.9 1.2 3.2 0 4.6-2.7 5.6-5.3 5.9.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.6-1.5 7.9-5.9 7.9-11C23.5 5.7 18.3.5 12 .5z"/>
+          </svg>
+        </a>
       </div>
     </section>
-
-  
-
 
   </main>
 
+  <!-- FOOTER -->
   <footer class="bg-white p-6 mt-12 shadow-inner">
-    <div class="container mx-auto">
-      <p>&copy; 2025 My Website</p>
+    <div class="container mx-auto px-6">
+      <p>&copy; 2025 Brynn Morrow</p>
     </div>
   </footer>
 
