@@ -157,7 +157,7 @@
     height: auto;
   }
 
-  /* Experience cards */
+/* Experience cards */
 .exp-card{
     display:flex;
     gap: 1rem;
