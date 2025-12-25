@@ -37,119 +37,100 @@
     </div>
   </header>
 
+  <!-- MAIN -->
   <main class="container mx-auto my-12 p-6 bg-white rounded shadow">
+
+    <!-- PAGE TITLE -->
     <section class="mb-8">
-        <h2 class="animated-text">Select Projects</h2>
-      </section>
-            
-        
-      <!-- <h2 class="text-2xl font-semibold mb-4">Hello, I'm Brynn Morrow!</h2> -->
-
-      <div class="flex items-center space-x-6 mt-8">
-        <!-- NUMBER 1 IMAGE -->
-        <img src="images/number_one.jpg" alt="Number One" class="w-48 h-48 object-cover rounded-full shadow-md">
-        <!-- PROJECT 1 -->
-       <div class="flex-1">
-    <h2 class="text-2xl font-bold mb-2">Visual Transit Simulator</h2>
-    <h3 class="text-xl font-semibold mb-4">
-      Language & Tools Utilized: Java, JavaScript, Visual Studio Code, Git, GitHub, Mockito.
-    </h3>
-
-    <ul class="list-disc pl-5 space-y-2">
-      <li>Interactive software which models vehicle transit around the University of Minnesota campus, simulating the behavior of vehicles and passengers.</li>
-      <li>Engaged in a collaborative effort with two teammates to improve software efficiency and usability.</li>
-      <li>Tasks included: creating and updating a UML class diagram, optimizing and restructuring the codebase for performance, and building/improving test doubles to maintain functionality.</li>
-    </ul>
-  </div>
-</div>
-
-
-      <div class="flex items-center space-x-6 mt-8">
-        <!-- NUMBER 2 IMAGE -->
-        <img src="images/number_two.jpg" alt="Number Two" class="w-48 h-48 object-cover rounded-full shadow-md">
-        <!-- PROJECT 2 -->
-        <div class="flex-1">
-            <h2 class="text-2xl font-bold mb-2">Bitwise & PuzzleBox</h2>
-            <h3 class="text-xl font-semibold mb-4">
-                Language & Tools Utilized: C, Assembly, Visual Studio Code, GDB
-            </h3>
-        
-            <ul class="list-disc pl-5 space-y-2">
-              <li>Solved programming puzzles to practice bit-level operations and increase understanding of integer and floating-point representations.</li>
-              <li>Debugged and reverse engineered a puzzle program, in order to determine the correct inputs to pass a sequence of phases and complete the program
-                successfully.</li>
-            </ul>
-          </div>
-        </div>
-
-
-        <article class="project-card" data-skills="python gis arcgis">
-          <h3 class="text-xl font-bold">Watershed Analysis Tool</h3>
-          <p>Spatial analysis using ArcGIS and Python.</p>
-        </article>
-        
-        <article class="project-card" data-skills="java algorithms">
-          <h3 class="text-xl font-bold">Graph Pathfinding</h3>
-          <p>Implemented Dijkstra’s algorithm in Java.</p>
-        </article>
-        
-
+      <h2 class="animated-text">Projects</h2>
+      <p class="text-neutral-600 mt-2">
+        Click a skill on the Skills page to filter projects here.
+      </p>
     </section>
 
+    <!-- PROJECTS GRID -->
+    <section class="mt-8">
 
-    <section>
-      <h2 class="text-2xl font-semibold mb-4">Contact Information</h2>
-      <div class="flex items-center space-x-4 mb-8">
-        <!-- LINKEDIN -->
-        <a href="https://www.linkedin.com/in/brynn-morrow/" 
-            class="text-blue-600 hover:text-blue-800 w-8 h-8 flex items-center justify-center" 
-            target="_blank" rel="noopener noreferrer"
-            title="LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" class="w-full h-full">
-            <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341a53.9 53.9 0 1 1 0-107.8 53.9 53.9 0 0 1 0 107.8zM447.9 448h-92.68V302.4c0-34.7-.7-79.3-48.28-79.3-48.4 0-55.8 37.8-55.8 76.8V448h-92.7V148.9h89v40.8h1.3c12.4-23.5 42.8-48.3 88-48.3 94 0 111.2 61.9 111.2 142.3V448z"/>
-          </svg>
-        </a>
-        <!-- GITHUB -->
-        <a href="https://github.com/brynnmorrow" 
-   class="text-blue-600 hover:text-blue-950 w-8 h-8 flex items-center justify-center" 
-   target="_blank" rel="noopener noreferrer"
-   title="GitHub">
+      <!-- Optional: shows active filter -->
+      <div id="filterBanner" class="hidden mb-6">
+        <div class="chip chip-active inline-flex items-center gap-2">
+          <span>Showing projects for:</span>
+          <span id="filterName" class="font-extrabold"></span>
+          <button id="clearFilter" class="ml-2 underline font-semibold">Clear</button>
+        </div>
+      </div>
 
-  <!-- GITHUB SVG ICON -->
-  <svg xmlns="http://www.w3.org/2000/svg" 
-       viewBox="0 0 24 24" 
-       fill="currentColor" 
-       class="w-full h-full relative -top-0.5">
-    <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008 11c.6.1.8-.3.8-.6v-2.3
-      c-3.3.7-4-1.5-4-1.5-.6-1.6-1.4-2-1.4-2-1.2-.8.1-.8.1-.8 1.3.1 2 1.4 2 
-      1.4 1.2 2 3 1.4 3.7 1 .1-.9.5-1.4.8-1.7-2.7-.3-5.6-1.3-5.6-6a4.7 
-      4.7 0 011.2-3.2 4.4 4.4 0 01.1-3.1s1-.3 3.3 1.3a11.4 11.4 0 016 
-      0C17 5.6 18 5.9 18 5.9a4.4 4.4 0 01.1 3.1 4.7 4.7 0 011.2 3.2c0 
-      4.7-2.9 5.6-5.7 5.9.5.4.9 1.1.9 2.3v3.3c0 .3.2.6.8.6A11.5 11.5 
-      0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/>
-  </svg>
-</a>
+      <div id="projectsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
+        <!-- PROJECT CARD (example) -->
+        <article class="project-card skill-card rounded-2xl p-6" data-skills="python gis arcgis">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-bold leading-snug">Habitat Suitability Mapping</h3>
+            <span class="chip text-sm" title="Category">GIS</span>
+          </div>
+          <p class="text-neutral-700 mt-2">
+            Built a spatial workflow to evaluate habitat suitability and produce publish-ready maps.
+          </p>
+
+          <!-- tech tags -->
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="chip text-sm">Python</span>
+            <span class="chip text-sm">GIS</span>
+            <span class="chip text-sm">ArcGIS</span>
+          </div>
+        </article>
+
+        <article class="project-card skill-card rounded-2xl p-6" data-skills="java gradle junit github">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-bold leading-snug">Java Application + Testing</h3>
+            <span class="chip text-sm" title="Category">Software</span>
+          </div>
+          <p class="text-neutral-700 mt-2">
+            Implemented a Java project with structured builds and robust unit testing.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="chip text-sm">Java</span>
+            <span class="chip text-sm">Gradle</span>
+            <span class="chip text-sm">JUnit</span>
+            <span class="chip text-sm">GitHub</span>
+          </div>
+        </article>
+
+        <article class="project-card skill-card rounded-2xl p-6" data-skills="r rstudio gis">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-bold leading-snug">Spatial Data Analysis in R</h3>
+            <span class="chip text-sm" title="Category">Analysis</span>
+          </div>
+          <p class="text-neutral-700 mt-2">
+            Explored spatial patterns and summarized results with clean visuals and reproducible code.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="chip text-sm">R</span>
+            <span class="chip text-sm">RStudio</span>
+            <span class="chip text-sm">GIS</span>
+          </div>
+        </article>
+
+        <!-- Add more projects here using the same structure:
+             class="project-card skill-card ..."
+             data-skills="space separated skill keys"
+        -->
 
       </div>
     </section>
-
-  
-
-
   </main>
 
+  <!-- FOOTER -->
   <footer class="bg-white p-6 mt-12 shadow-inner">
     <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-  
-      <!-- Copyright -->
+
       <p class="text-sm text-gray-600">
         &copy; <span id="year"></span> Brynn Morrow
       </p>
-  
-      <!-- Social Icons -->
+
       <div class="flex items-center space-x-5">
-        
         <!-- LinkedIn -->
         <a
           href="https://www.linkedin.com/in/brynn-morrow/"
@@ -162,7 +143,7 @@
             <path d="M100.28 448H7.4V148.9h92.88zM53.79 107.8C24.09 107.8 0 83.7 0 53.9S24.1 0 53.8 0c29.7 0 53.8 24.1 53.8 53.9s-24.1 53.9-53.8 53.9zM447.9 448h-92.68V302.4c0-34.7-.7-79.3-48.28-79.3-48.4 0-55.8 37.8-55.8 76.8V448h-92.7V148.9h89v40.8h1.3c12.4-23.5 42.8-48.3 88-48.3 94 0 111.2 61.9 111.2 142.3V448z"/>
           </svg>
         </a>
-  
+
         <!-- GitHub -->
         <a
           href="https://github.com/brynnmorrow"
@@ -175,11 +156,70 @@
             <path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 11 .6.1.8-.3.8-.6v-2.3c-3.2.7-3.9-1.5-3.9-1.5-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.3 1.2.9-.3 1.9-.4 2.9-.4s2 .1 2.9.4c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 3 .1 3.3.8.8 1.2 1.9 1.2 3.2 0 4.6-2.7 5.6-5.3 5.9.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.6-1.5 7.9-5.9 7.9-11C23.5 5.7 18.3.5 12 .5z"/>
           </svg>
         </a>
-  
       </div>
     </div>
   </footer>
-  
+
+  <!-- SCRIPTS -->
+  <script>
+    // footer year
+    const y = document.getElementById("year");
+    if (y) y.textContent = new Date().getFullYear();
+
+    // --- Filtering logic ---
+    // Skills page should link here like: projects.html?skill=python&label=Python
+    // We filter by data-skills="... python ..."
+
+    const params = new URLSearchParams(window.location.search);
+    const selectedSkill = (params.get("skill") || "").toLowerCase().trim();
+    const selectedLabel = (params.get("label") || selectedSkill);
+
+    const cards = document.querySelectorAll(".project-card");
+    const banner = document.getElementById("filterBanner");
+    const filterName = document.getElementById("filterName");
+    const clearBtn = document.getElementById("clearFilter");
+
+    function showAll() {
+      cards.forEach(c => (c.style.display = ""));
+      if (banner) banner.classList.add("hidden");
+      if (history.replaceState) {
+        const cleanUrl = window.location.pathname; // remove query
+        history.replaceState({}, "", cleanUrl);
+      }
+    }
+
+    function filterBy(skillKey, label) {
+      let anyShown = false;
+
+      cards.forEach(card => {
+        const skills = (card.getAttribute("data-skills") || "").toLowerCase().split(/\s+/);
+        const match = skills.includes(skillKey);
+        card.style.display = match ? "" : "none";
+        if (match) anyShown = true;
+      });
+
+      if (banner && filterName) {
+        filterName.textContent = label || skillKey;
+        banner.classList.remove("hidden");
+      }
+
+      // If nothing matches, still show banner, but show all so the page isn't empty
+      if (!anyShown) {
+        showAll();
+      }
+    }
+
+    if (selectedSkill) {
+      filterBy(selectedSkill, selectedLabel);
+    }
+
+    if (clearBtn) {
+      clearBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        showAll();
+      });
+    }
+  </script>
 
 </body>
 </html>
