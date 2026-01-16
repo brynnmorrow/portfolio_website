@@ -60,50 +60,25 @@
         </div>
       </div>
 
-      <div id="projectsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- SORT BAR -->
+      <div class="flex flex-col sm:flex-row sm:items-center gap-3 mb-6">
+        <label class="text-sm font-semibold text-neutral-700">
+          Sort by date:
+        </label>
 
-        <article class="project-card skill-card rounded-2xl p-6"
-          data-skills="gis arcgis raster vector modeling suitability">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-xl font-bold leading-snug">
-              Multi-Criteria Cartographic Modeling for Park Site Selection
-            </h3>
-            <span class="chip text-sm">GIS Capstone</span>
-          </div>
+        <select id="sortSelect" class="chip text-sm">
+          <option value="newest">Newest → Oldest</option>
+          <option value="oldest">Oldest → Newest</option>
+        </select>
+      </div>
 
-          <p class="text-neutral-700 mt-2">
-            Built a constraint-based spatial decision model to identify suitable park sites
-            by integrating land ownership, terrain, transportation access, and environmental restrictions.
-          </p>
-
-          <ul class="list-disc pl-5 mt-3 space-y-1 text-neutral-700">
-            <li>
-              Designed a cartographic modeling workflow using buffers, intersects, unions,
-              and erases to enforce real-world planning constraints.
-            </li>
-            <li>
-              Translated site-selection criteria into binary spatial masks and combined them
-              through logical AND overlays to produce defensible suitability results.
-            </li>
-            <li>
-              Converted raster-derived slope classes to vector polygons, corrected multipart
-              geometries, recalculated areas, and filtered candidates by minimum size thresholds.
-            </li>
-          </ul>
-
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="chip text-sm">ArcGIS Pro</span>
-            <span class="chip text-sm">Cartographic Modeling</span>
-            <span class="chip text-sm">Spatial Overlay</span>
-            <span class="chip text-sm">Suitability Analysis</span>
-            <span class="chip text-sm">Decision Support</span>
-          </div>
-        </article>
-
-
+      <!-- SINGLE COLUMN GRID -->
+      <div id="projectsGrid" class="grid grid-cols-1 gap-6">
 
         <!-- PROJECT CARD (example) -->
-        <article class="project-card skill-card rounded-2xl p-6" data-skills="python gis arcgis">
+        <article class="project-card skill-card rounded-2xl p-6"
+                 data-skills="python gis arcgis"
+                 data-date="2024-10-10">
           <div class="flex items-start justify-between gap-3">
             <h3 class="text-xl font-bold leading-snug">Habitat Suitability Mapping</h3>
             <span class="chip text-sm" title="Category">GIS</span>
@@ -120,7 +95,9 @@
           </div>
         </article>
 
-        <article class="project-card skill-card rounded-2xl p-6" data-skills="java gradle junit github">
+        <article class="project-card skill-card rounded-2xl p-6"
+                 data-skills="java gradle junit github"
+                 data-date="2024-11-15">
           <div class="flex items-start justify-between gap-3">
             <h3 class="text-xl font-bold leading-snug">Java Application + Testing</h3>
             <span class="chip text-sm" title="Category">Software</span>
@@ -137,7 +114,9 @@
           </div>
         </article>
 
-        <article class="project-card skill-card rounded-2xl p-6" data-skills="r rstudio gis">
+        <article class="project-card skill-card rounded-2xl p-6"
+                 data-skills="r rstudio gis"
+                 data-date="2025-02-01">
           <div class="flex items-start justify-between gap-3">
             <h3 class="text-xl font-bold leading-snug">Spatial Data Analysis in R</h3>
             <span class="chip text-sm" title="Category">Analysis</span>
@@ -153,7 +132,9 @@
           </div>
         </article>
 
-        <article class="project-card skill-card rounded-2xl p-6" data-skills="java gradle junit github">
+        <article class="project-card skill-card rounded-2xl p-6"
+                 data-skills="gis arcgis hydrology raster modeling"
+                 data-date="2025-11-05">
           <div class="flex items-start justify-between gap-3">
             <h3 class="text-xl font-bold leading-snug">Watershed Analysis & Hydrologic Modeling</h3>
             <span class="chip text-sm" title="Category">GIS Analysis</span>
@@ -163,14 +144,48 @@
             <li>Reclassified NLCD land cover and summarized watershed composition using zonal statistics.</li>
             <li>Performed buffer analyses to quantify road lengths near streams and evaluate watershed environmental impacts.</li>
           </ul>
-          
 
           <div class="flex flex-wrap gap-2 mt-4">
             <span class="chip text-sm">ArcGIS Pro</span>
+            <span class="chip text-sm">Hydrology</span>
+            <span class="chip text-sm">Raster Analysis</span>
           </div>
         </article>
 
-        <article class="project-card skill-card rounded-2xl p-6" data-skills="java gradle junit github">
+        <!-- YOUR FLAGSHIP PROJECT (added as a single-column capstone card) -->
+        <article class="project-card skill-card rounded-2xl p-6"
+                 data-skills="gis arcgis raster vector modeling suitability decision-support"
+                 data-date="2025-12-01">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-bold leading-snug">
+              Multi-Criteria Cartographic Modeling for Park Site Selection
+            </h3>
+            <span class="chip text-sm" title="Category">GIS Capstone</span>
+          </div>
+
+          <p class="text-neutral-700 mt-2">
+            Built a constraint-based spatial decision model to identify suitable park sites by integrating
+            land ownership, terrain slope, transportation access, hydrology, and wetlands restrictions.
+          </p>
+
+          <ul class="list-disc pl-5 mt-3 space-y-1 text-neutral-700">
+            <li>Designed a cartographic modeling workflow using buffers, intersects, unions, and erases to enforce planning constraints.</li>
+            <li>Translated criteria into binary spatial masks and combined them through logical AND overlays to produce defensible suitability results.</li>
+            <li>Converted raster-derived slope classes to vector polygons, corrected multipart geometries, recalculated areas, and filtered candidates by minimum area thresholds.</li>
+          </ul>
+
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="chip text-sm">ArcGIS Pro</span>
+            <span class="chip text-sm">Cartographic Modeling</span>
+            <span class="chip text-sm">Spatial Overlay</span>
+            <span class="chip text-sm">Suitability Analysis</span>
+            <span class="chip text-sm">Decision Support</span>
+          </div>
+        </article>
+
+        <article class="project-card skill-card rounded-2xl p-6"
+                 data-skills="java javascript git github mockito"
+                 data-date="2024-03-15">
           <div class="flex items-start justify-between gap-3">
             <h3 class="text-xl font-bold leading-snug">Visual Transit Simulator</h3>
             <span class="chip text-sm" title="Category">Program Design & Development</span>
@@ -190,7 +205,9 @@
           </div>
         </article>
 
-        <article class="project-card skill-card rounded-2xl p-6" data-skills="java gradle junit github">
+        <article class="project-card skill-card rounded-2xl p-6"
+                 data-skills="c assembly gdb systems"
+                 data-date="2024-04-20">
           <div class="flex items-start justify-between gap-3">
             <h3 class="text-xl font-bold leading-snug">Bitwise & PuzzleBox</h3>
             <span class="chip text-sm" title="Category">Machine Architecture & Organization</span>
@@ -199,7 +216,6 @@
             <li>Solved programming puzzles to practice bit-level operations and increase understanding of integer and floating-point representations.</li>
             <li>Debugged and reverse engineered a puzzle program, in order to determine the correct inputs to pass a sequence of phases and complete the program successfully.</li>
           </ul>
-          
 
           <div class="flex flex-wrap gap-2 mt-4">
             <span class="chip text-sm">C</span>
@@ -208,11 +224,11 @@
             <span class="chip text-sm">GDB</span>
           </div>
         </article>
-        
 
         <!-- Add more projects here using the same structure:
              class="project-card skill-card ..."
              data-skills="space separated skill keys"
+             data-date="YYYY-MM-DD"
         -->
 
       </div>
@@ -263,24 +279,46 @@
     const y = document.getElementById("year");
     if (y) y.textContent = new Date().getFullYear();
 
-    // --- Filtering logic ---
+    // --- Filtering + sorting logic ---
     // Skills page should link here like: projects.html?skill=python&label=Python
-    // We filter by data-skills="... python ..."
+    // Cards: data-skills="... python ...", data-date="YYYY-MM-DD"
 
     const params = new URLSearchParams(window.location.search);
     const selectedSkill = (params.get("skill") || "").toLowerCase().trim();
     const selectedLabel = (params.get("label") || selectedSkill);
 
-    const cards = document.querySelectorAll(".project-card");
+    const grid = document.getElementById("projectsGrid");
+    const cardsNodeList = document.querySelectorAll(".project-card");
+
     const banner = document.getElementById("filterBanner");
     const filterName = document.getElementById("filterName");
     const clearBtn = document.getElementById("clearFilter");
 
+    const sortSelect = document.getElementById("sortSelect");
+
+    const allCards = Array.from(cardsNodeList);
+
+    function parseDate(card) {
+      const raw = (card.getAttribute("data-date") || "").trim();
+      const t = Date.parse(raw);
+      return Number.isFinite(t) ? t : 0; // missing/invalid dates fall back to oldest
+    }
+
+    function applySort(order) {
+      if (!grid) return;
+
+      const dir = order === "oldest" ? 1 : -1; // oldest->newest or newest->oldest
+      const sorted = [...allCards].sort((a, b) => (parseDate(a) - parseDate(b)) * dir);
+
+      sorted.forEach(card => grid.appendChild(card));
+    }
+
     function showAll() {
-      cards.forEach(c => (c.style.display = ""));
+      allCards.forEach(c => (c.style.display = ""));
       if (banner) banner.classList.add("hidden");
+
       if (history.replaceState) {
-        const cleanUrl = window.location.pathname; // remove query
+        const cleanUrl = window.location.pathname;
         history.replaceState({}, "", cleanUrl);
       }
     }
@@ -288,8 +326,12 @@
     function filterBy(skillKey, label) {
       let anyShown = false;
 
-      cards.forEach(card => {
-        const skills = (card.getAttribute("data-skills") || "").toLowerCase().split(/\s+/);
+      allCards.forEach(card => {
+        const skills = (card.getAttribute("data-skills") || "")
+          .toLowerCase()
+          .split(/\s+/)
+          .filter(Boolean);
+
         const match = skills.includes(skillKey);
         card.style.display = match ? "" : "none";
         if (match) anyShown = true;
@@ -300,20 +342,30 @@
         banner.classList.remove("hidden");
       }
 
-      // If nothing matches, still show banner, but show all so the page isn't empty
-      if (!anyShown) {
-        showAll();
-      }
+      if (!anyShown) showAll();
     }
 
+    // Initial sort (default newest)
+    const initialSort = (sortSelect && sortSelect.value) ? sortSelect.value : "newest";
+    applySort(initialSort);
+
+    // Initial filter from URL
     if (selectedSkill) {
       filterBy(selectedSkill, selectedLabel);
     }
 
+    // Clear filter
     if (clearBtn) {
       clearBtn.addEventListener("click", (e) => {
         e.preventDefault();
         showAll();
+      });
+    }
+
+    // Sort change
+    if (sortSelect) {
+      sortSelect.addEventListener("change", () => {
+        applySort(sortSelect.value);
       });
     }
   </script>
