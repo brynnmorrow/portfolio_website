@@ -23,7 +23,6 @@
       </h1>
 
       <nav class="flex flex-wrap gap-x-6 gap-y-2 text-lg">
-        <!-- <a href="index.html" class="nav-link">Home</a> -->
         <a href="projects.html" class="nav-link">Projects</a>
         <a href="skills.html" class="nav-link">Skills</a>
         <a href="experience.html" class="nav-link">Experience</a>
@@ -36,12 +35,11 @@
   <!-- MAIN -->
   <main class="container mx-auto my-12 p-6 bg-white rounded shadow">
 
-    <!-- Animated section title -->
     <section class="mb-8">
       <h2 class="animated-text">Skills</h2>
     </section>
 
-    <!-- SKILLS ONLY -->
+    <!-- SKILLS -->
     <section class="max-w-5xl mx-auto px-6 py-8">
 
       <!-- Category chips -->
@@ -51,243 +49,151 @@
         <button class="chip" data-filter="software">⚙ Software</button>
         <button class="chip" data-filter="libraries">📚 Libraries</button>
       </div>
-      
 
-      <!-- Responsive grid -->
+      <!-- Skills grid -->
       <div id="skillsGrid"
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
- 
+           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
         <!-- ArcGIS Pro -->
-        <a href="projects.html?skill=python">
+        <a href="projects.html?skill=arcgis&label=ArcGIS%20Pro">
           <article class="skill-card rounded-2xl p-6" data-cat="software">
-            <div class="flex items-center gap-3">
-              <!-- <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900">
-                <img src="icons/python.png" alt="Python" class="w-7 h-7">
-              </div> -->
-              <h3 class="text-xl font-bold">⚙ ArcGIS Pro</h3>
-            </div>
+            <h3 class="text-xl font-bold">⚙ ArcGIS Pro</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
         <!-- Assembly -->
-        <a href="projects.html?skill=python">
+        <a href="projects.html?skill=assembly&label=Assembly">
           <article class="skill-card rounded-2xl p-6" data-cat="languages">
-            <div class="flex items-center gap-3">
-              <!-- <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900">
-                <img src="icons/python.png" alt="Python" class="w-7 h-7">
-              </div> -->
-              <h3 class="text-xl font-bold">🔊 Assembly</h3>
-            </div>
+            <h3 class="text-xl font-bold">🔊 Assembly</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
         <!-- C -->
-        <a href="projects.html?skill=python">
+        <a href="projects.html?skill=c&label=C">
           <article class="skill-card rounded-2xl p-6" data-cat="languages">
-            <div class="flex items-center gap-3">
-              <!-- <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900">
-                <img src="icons/python.png" alt="Python" class="w-7 h-7">
-              </div> -->
-              <h3 class="text-xl font-bold">🔊 C</h3>
-            </div>
+            <h3 class="text-xl font-bold">🔊 C</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
         <!-- GDB -->
-        <a href="projects.html?skill=python">
+        <a href="projects.html?skill=gdb&label=GDB">
           <article class="skill-card rounded-2xl p-6" data-cat="software">
-            <div class="flex items-center gap-3">
-              <!-- <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900">
-                <img src="icons/python.png" alt="Python" class="w-7 h-7">
-              </div> -->
-              <h3 class="text-xl font-bold">⚙ GDB</h3>
-            </div>
+            <h3 class="text-xl font-bold">⚙ GDB</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
         <!-- Git -->
-        <a href="projects.html?skill=python">
+        <a href="projects.html?skill=git&label=Git">
           <article class="skill-card rounded-2xl p-6" data-cat="software">
-            <div class="flex items-center gap-3">
-              <!-- <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900">
-                <img src="icons/python.png" alt="Python" class="w-7 h-7">
-              </div> -->
-              <h3 class="text-xl font-bold">⚙ Git</h3>
-            </div>
+            <h3 class="text-xl font-bold">⚙ Git</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
         <!-- GitHub -->
-        <a href="projects.html?skill=python">
+        <a href="projects.html?skill=github&label=GitHub">
           <article class="skill-card rounded-2xl p-6" data-cat="software">
-            <div class="flex items-center gap-3">
-              <!-- <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900">
-                <img src="icons/python.png" alt="Python" class="w-7 h-7">
-              </div> -->
-              <h3 class="text-xl font-bold">⚙ GitHub</h3>
-            </div>
+            <h3 class="text-xl font-bold">⚙ GitHub</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
         <!-- Gradle -->
-        <a href="projects.html?skill=python">
+        <a href="projects.html?skill=gradle&label=Gradle">
           <article class="skill-card rounded-2xl p-6" data-cat="software">
-            <div class="flex items-center gap-3">
-              <!-- <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900">
-                <img src="icons/python.png" alt="Python" class="w-7 h-7">
-              </div> -->
-              <h3 class="text-xl font-bold">⚙ Gradle</h3>
-            </div>
+            <h3 class="text-xl font-bold">⚙ Gradle</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
-        <a href="projects.html?skill=python">
+        <!-- IntelliJ -->
+        <a href="projects.html?skill=intellij&label=IntelliJ">
           <article class="skill-card rounded-2xl p-6" data-cat="software">
-            <div class="flex items-center gap-3">
-              <!-- <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900">
-                <img src="icons/python.png" alt="Python" class="w-7 h-7">
-              </div> -->
-              <h3 class="text-xl font-bold">⚙ IntelliJ</h3>
-            </div>
+            <h3 class="text-xl font-bold">⚙ IntelliJ</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
         <!-- JaCoCo -->
-        <a href="projects.html?skill=python">
+        <a href="projects.html?skill=jacoco&label=JaCoCo">
           <article class="skill-card rounded-2xl p-6" data-cat="libraries">
-            <div class="flex items-center gap-3">
-              <!-- <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900">
-                <img src="icons/python.png" alt="Python" class="w-7 h-7">
-              </div> -->
-              <h3 class="text-xl font-bold">📚 Jacoco</h3>
-            </div>
+            <h3 class="text-xl font-bold">📚 JaCoCo</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
         <!-- Java -->
-        <a href="projects.html?skill=python">
+        <a href="projects.html?skill=java&label=Java">
           <article class="skill-card rounded-2xl p-6" data-cat="languages">
-            <div class="flex items-center gap-3">
-              <!-- <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900">
-                <img src="icons/python.png" alt="Python" class="w-7 h-7">
-              </div> -->
-              <h3 class="text-xl font-bold">🔊 Java</h3>
-            </div>
+            <h3 class="text-xl font-bold">🔊 Java</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
-        </article>
 
         <!-- JavaScript -->
-        <a href="projects.html?skill=python">
+        <a href="projects.html?skill=javascript&label=JavaScript">
           <article class="skill-card rounded-2xl p-6" data-cat="languages">
-            <div class="flex items-center gap-3">
-              <!-- <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900">
-                <img src="icons/python.png" alt="Python" class="w-7 h-7">
-              </div> -->
-              <h3 class="text-xl font-bold">🔊 JavaScript</h3>
-            </div>
+            <h3 class="text-xl font-bold">🔊 JavaScript</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
         <!-- JUnit -->
-        <a href="projects.html?skill=python">
+        <a href="projects.html?skill=junit&label=JUnit">
           <article class="skill-card rounded-2xl p-6" data-cat="libraries">
-            <div class="flex items-center gap-3">
-              <!-- <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900">
-                <img src="icons/python.png" alt="Python" class="w-7 h-7">
-              </div> -->
-              <h3 class="text-xl font-bold">📚 JUnit</h3>
-            </div>
+            <h3 class="text-xl font-bold">📚 JUnit</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
-        <!-- LaTex -->
-        <a href="projects.html?skill=python">
+        <!-- LaTeX -->
+        <a href="projects.html?skill=latex&label=LaTeX">
           <article class="skill-card rounded-2xl p-6" data-cat="languages">
-            <div class="flex items-center gap-3">
-              <!-- <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900">
-                <img src="icons/python.png" alt="Python" class="w-7 h-7">
-              </div> -->
-              <h3 class="text-xl font-bold">🔊 LaTex</h3>
-            </div>
+            <h3 class="text-xl font-bold">🔊 LaTeX</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
         <!-- Mockito -->
-        <a href="projects.html?skill=python">
+        <a href="projects.html?skill=mockito&label=Mockito">
           <article class="skill-card rounded-2xl p-6" data-cat="libraries">
-            <div class="flex items-center gap-3">
-              <!-- <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900">
-                <img src="icons/python.png" alt="Python" class="w-7 h-7">
-              </div> -->
-              <h3 class="text-xl font-bold">📚 Mockito</h3>
-            </div>
+            <h3 class="text-xl font-bold">📚 Mockito</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
         <!-- Python -->
-        <a href="projects.html?skill=python">
+        <a href="projects.html?skill=python&label=Python">
           <article class="skill-card rounded-2xl p-6" data-cat="languages">
-            <div class="flex items-center gap-3">
-              <!-- <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900">
-                <img src="icons/python.png" alt="Python" class="w-7 h-7">
-              </div> -->
-              <h3 class="text-xl font-bold">🔊 Python</h3>
-            </div>
+            <h3 class="text-xl font-bold">🔊 Python</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
         <!-- R -->
-        <a href="projects.html?skill=python">
+        <a href="projects.html?skill=r&label=R">
           <article class="skill-card rounded-2xl p-6" data-cat="languages">
-            <div class="flex items-center gap-3">
-              <!-- <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900">
-                <img src="icons/python.png" alt="Python" class="w-7 h-7">
-              </div> -->
-              <h3 class="text-xl font-bold">🔊 R</h3>
-            </div>
+            <h3 class="text-xl font-bold">🔊 R</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
         <!-- RStudio -->
-        <a href="projects.html?skill=python">
+        <a href="projects.html?skill=rstudio&label=RStudio">
           <article class="skill-card rounded-2xl p-6" data-cat="software">
-            <div class="flex items-center gap-3">
-              <!-- <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900">
-                <img src="icons/python.png" alt="Python" class="w-7 h-7">
-              </div> -->
-              <h3 class="text-xl font-bold">⚙ RStudio</h3>
-            </div>
+            <h3 class="text-xl font-bold">⚙ RStudio</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
-        <!-- Visual Studio Code -->
-        <a href="projects.html?skill=python">
+        <!-- VS Code -->
+        <a href="projects.html?skill=vscode&label=Visual%20Studio%20Code">
           <article class="skill-card rounded-2xl p-6" data-cat="software">
-            <div class="flex items-center gap-3">
-              <!-- <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900">
-                <img src="icons/python.png" alt="Python" class="w-7 h-7">
-              </div> -->
-              <h3 class="text-xl font-bold">⚙ Visual Studio Code</h3>
-            </div>
+            <h3 class="text-xl font-bold">⚙ Visual Studio Code</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
@@ -296,59 +202,20 @@
     </section>
   </main>
 
-
-
-
   <!-- FOOTER -->
   <footer class="bg-white p-6 mt-12 shadow-inner">
     <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-  
-      <!-- Copyright -->
       <p class="text-sm text-gray-600">
         &copy; <span id="year"></span> Brynn Morrow
       </p>
-  
-      <!-- Social Icons -->
-      <div class="flex items-center space-x-5">
-        
-        <!-- LinkedIn -->
-        <a
-          href="https://www.linkedin.com/in/brynn-morrow/"
-          class="icon-link w-6 h-6"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="LinkedIn"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
-            <path d="M100.28 448H7.4V148.9h92.88zM53.79 107.8C24.09 107.8 0 83.7 0 53.9S24.1 0 53.8 0c29.7 0 53.8 24.1 53.8 53.9s-24.1 53.9-53.8 53.9zM447.9 448h-92.68V302.4c0-34.7-.7-79.3-48.28-79.3-48.4 0-55.8 37.8-55.8 76.8V448h-92.7V148.9h89v40.8h1.3c12.4-23.5 42.8-48.3 88-48.3 94 0 111.2 61.9 111.2 142.3V448z"/>
-          </svg>
-        </a>
-  
-        <!-- GitHub -->
-        <a
-          href="https://github.com/brynnmorrow"
-          class="icon-link w-6 h-6"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="GitHub"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 11 .6.1.8-.3.8-.6v-2.3c-3.2.7-3.9-1.5-3.9-1.5-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.3 1.2.9-.3 1.9-.4 2.9-.4s2 .1 2.9.4c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 3 .1 3.3.8.8 1.2 1.9 1.2 3.2 0 4.6-2.7 5.6-5.3 5.9.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.6-1.5 7.9-5.9 7.9-11C23.5 5.7 18.3.5 12 .5z"/>
-          </svg>
-        </a>
-  
-      </div>
     </div>
   </footer>
-  
 
   <!-- YEAR + FILTER SCRIPT -->
   <script>
-    // year
     const y = document.getElementById("year");
     if (y) y.textContent = new Date().getFullYear();
 
-    // filter
     const chips = document.querySelectorAll('.chip[data-filter]');
     const cards = document.querySelectorAll('.skill-card');
 
@@ -361,7 +228,8 @@
         setActiveChip(chip);
         const f = chip.getAttribute('data-filter');
         cards.forEach(card => {
-          card.style.display = (f === 'all' || card.dataset.cat === f) ? '' : 'none';
+          card.style.display =
+            (f === 'all' || card.dataset.cat === f) ? '' : 'none';
         });
       });
     });
