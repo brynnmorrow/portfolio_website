@@ -6,11 +6,13 @@
   <title>Brynn Morrow – Skills</title>
 
   <!-- Tailwind -->
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+  />
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="bg-gray-100 text-gray-900">
@@ -35,6 +37,7 @@
   <!-- MAIN -->
   <main class="container mx-auto my-12 p-6 bg-white rounded shadow">
 
+    <!-- TITLE -->
     <section class="mb-8">
       <h2 class="animated-text">Skills</h2>
     </section>
@@ -42,7 +45,7 @@
     <!-- SKILLS -->
     <section class="max-w-5xl mx-auto px-6 py-8">
 
-      <!-- Category chips -->
+      <!-- FILTER CHIPS -->
       <div class="flex flex-wrap gap-3 justify-center mb-8">
         <button class="chip chip-active" data-filter="all">✨ All</button>
         <button class="chip" data-filter="languages">🔊 Languages</button>
@@ -50,150 +53,152 @@
         <button class="chip" data-filter="libraries">📚 Libraries</button>
       </div>
 
-      <!-- Skills grid -->
-      <div id="skillsGrid"
-           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-
-        <!-- ArcGIS Pro -->
-        <a href="projects.html?skill=arcgis&label=ArcGIS%20Pro">
-          <article class="skill-card rounded-2xl p-6" data-cat="software">
-            <h3 class="text-xl font-bold">⚙ ArcGIS Pro</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
+      <!-- GRID -->
+      <div
+        id="skillsGrid"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+      >
 
         <!-- Assembly -->
-        <a href="projects.html?skill=assembly&label=Assembly">
-          <article class="skill-card rounded-2xl p-6" data-cat="languages">
+        <a href="projects.html?skill=assembly&label=Assembly" data-cat="languages">
+          <article class="skill-card rounded-2xl p-6">
             <h3 class="text-xl font-bold">🔊 Assembly</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
         <!-- C -->
-        <a href="projects.html?skill=c&label=C">
-          <article class="skill-card rounded-2xl p-6" data-cat="languages">
+        <a href="projects.html?skill=c&label=C" data-cat="languages">
+          <article class="skill-card rounded-2xl p-6">
             <h3 class="text-xl font-bold">🔊 C</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
-        <!-- GDB -->
-        <a href="projects.html?skill=gdb&label=GDB">
-          <article class="skill-card rounded-2xl p-6" data-cat="software">
-            <h3 class="text-xl font-bold">⚙ GDB</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
-
-        <!-- Git -->
-        <a href="projects.html?skill=git&label=Git">
-          <article class="skill-card rounded-2xl p-6" data-cat="software">
-            <h3 class="text-xl font-bold">⚙ Git</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
-
-        <!-- GitHub -->
-        <a href="projects.html?skill=github&label=GitHub">
-          <article class="skill-card rounded-2xl p-6" data-cat="software">
-            <h3 class="text-xl font-bold">⚙ GitHub</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
-
-        <!-- Gradle -->
-        <a href="projects.html?skill=gradle&label=Gradle">
-          <article class="skill-card rounded-2xl p-6" data-cat="software">
-            <h3 class="text-xl font-bold">⚙ Gradle</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
-
-        <!-- IntelliJ -->
-        <a href="projects.html?skill=intellij&label=IntelliJ">
-          <article class="skill-card rounded-2xl p-6" data-cat="software">
-            <h3 class="text-xl font-bold">⚙ IntelliJ</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
-
-        <!-- JaCoCo -->
-        <a href="projects.html?skill=jacoco&label=JaCoCo">
-          <article class="skill-card rounded-2xl p-6" data-cat="libraries">
-            <h3 class="text-xl font-bold">📚 JaCoCo</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
-
         <!-- Java -->
-        <a href="projects.html?skill=java&label=Java">
-          <article class="skill-card rounded-2xl p-6" data-cat="languages">
+        <a href="projects.html?skill=java&label=Java" data-cat="languages">
+          <article class="skill-card rounded-2xl p-6">
             <h3 class="text-xl font-bold">🔊 Java</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
         <!-- JavaScript -->
-        <a href="projects.html?skill=javascript&label=JavaScript">
-          <article class="skill-card rounded-2xl p-6" data-cat="languages">
+        <a href="projects.html?skill=javascript&label=JavaScript" data-cat="languages">
+          <article class="skill-card rounded-2xl p-6">
             <h3 class="text-xl font-bold">🔊 JavaScript</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
-        <!-- JUnit -->
-        <a href="projects.html?skill=junit&label=JUnit">
-          <article class="skill-card rounded-2xl p-6" data-cat="libraries">
-            <h3 class="text-xl font-bold">📚 JUnit</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
-
         <!-- LaTeX -->
-        <a href="projects.html?skill=latex&label=LaTeX">
-          <article class="skill-card rounded-2xl p-6" data-cat="languages">
+        <a href="projects.html?skill=latex&label=LaTeX" data-cat="languages">
+          <article class="skill-card rounded-2xl p-6">
             <h3 class="text-xl font-bold">🔊 LaTeX</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
-        <!-- Mockito -->
-        <a href="projects.html?skill=mockito&label=Mockito">
-          <article class="skill-card rounded-2xl p-6" data-cat="libraries">
-            <h3 class="text-xl font-bold">📚 Mockito</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
-
         <!-- Python -->
-        <a href="projects.html?skill=python&label=Python">
-          <article class="skill-card rounded-2xl p-6" data-cat="languages">
+        <a href="projects.html?skill=python&label=Python" data-cat="languages">
+          <article class="skill-card rounded-2xl p-6">
             <h3 class="text-xl font-bold">🔊 Python</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
         <!-- R -->
-        <a href="projects.html?skill=r&label=R">
-          <article class="skill-card rounded-2xl p-6" data-cat="languages">
+        <a href="projects.html?skill=r&label=R" data-cat="languages">
+          <article class="skill-card rounded-2xl p-6">
             <h3 class="text-xl font-bold">🔊 R</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
+        <!-- ArcGIS Pro -->
+        <a href="projects.html?skill=arcgis&label=ArcGIS%20Pro" data-cat="software">
+          <article class="skill-card rounded-2xl p-6">
+            <h3 class="text-xl font-bold">⚙ ArcGIS Pro</h3>
+            <div class="accent mt-4"></div>
+          </article>
+        </a>
+
+        <!-- GDB -->
+        <a href="projects.html?skill=gdb&label=GDB" data-cat="software">
+          <article class="skill-card rounded-2xl p-6">
+            <h3 class="text-xl font-bold">⚙ GDB</h3>
+            <div class="accent mt-4"></div>
+          </article>
+        </a>
+
+        <!-- Git -->
+        <a href="projects.html?skill=git&label=Git" data-cat="software">
+          <article class="skill-card rounded-2xl p-6">
+            <h3 class="text-xl font-bold">⚙ Git</h3>
+            <div class="accent mt-4"></div>
+          </article>
+        </a>
+
+        <!-- GitHub -->
+        <a href="projects.html?skill=github&label=GitHub" data-cat="software">
+          <article class="skill-card rounded-2xl p-6">
+            <h3 class="text-xl font-bold">⚙ GitHub</h3>
+            <div class="accent mt-4"></div>
+          </article>
+        </a>
+
+        <!-- Gradle -->
+        <a href="projects.html?skill=gradle&label=Gradle" data-cat="software">
+          <article class="skill-card rounded-2xl p-6">
+            <h3 class="text-xl font-bold">⚙ Gradle</h3>
+            <div class="accent mt-4"></div>
+          </article>
+        </a>
+
+        <!-- IntelliJ -->
+        <a href="projects.html?skill=intellij&label=IntelliJ" data-cat="software">
+          <article class="skill-card rounded-2xl p-6">
+            <h3 class="text-xl font-bold">⚙ IntelliJ</h3>
+            <div class="accent mt-4"></div>
+          </article>
+        </a>
+
         <!-- RStudio -->
-        <a href="projects.html?skill=rstudio&label=RStudio">
-          <article class="skill-card rounded-2xl p-6" data-cat="software">
+        <a href="projects.html?skill=rstudio&label=RStudio" data-cat="software">
+          <article class="skill-card rounded-2xl p-6">
             <h3 class="text-xl font-bold">⚙ RStudio</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
 
         <!-- VS Code -->
-        <a href="projects.html?skill=vscode&label=Visual%20Studio%20Code">
-          <article class="skill-card rounded-2xl p-6" data-cat="software">
+        <a href="projects.html?skill=vscode&label=VS%20Code" data-cat="software">
+          <article class="skill-card rounded-2xl p-6">
             <h3 class="text-xl font-bold">⚙ Visual Studio Code</h3>
+            <div class="accent mt-4"></div>
+          </article>
+        </a>
+
+        <!-- JaCoCo -->
+        <a href="projects.html?skill=jacoco&label=JaCoCo" data-cat="libraries">
+          <article class="skill-card rounded-2xl p-6">
+            <h3 class="text-xl font-bold">📚 JaCoCo</h3>
+            <div class="accent mt-4"></div>
+          </article>
+        </a>
+
+        <!-- JUnit -->
+        <a href="projects.html?skill=junit&label=JUnit" data-cat="libraries">
+          <article class="skill-card rounded-2xl p-6">
+            <h3 class="text-xl font-bold">📚 JUnit</h3>
+            <div class="accent mt-4"></div>
+          </article>
+        </a>
+
+        <!-- Mockito -->
+        <a href="projects.html?skill=mockito&label=Mockito" data-cat="libraries">
+          <article class="skill-card rounded-2xl p-6">
+            <h3 class="text-xl font-bold">📚 Mockito</h3>
             <div class="accent mt-4"></div>
           </article>
         </a>
@@ -211,25 +216,29 @@
     </div>
   </footer>
 
-  <!-- YEAR + FILTER SCRIPT -->
+  <!-- SCRIPTS -->
   <script>
+    // year
     const y = document.getElementById("year");
     if (y) y.textContent = new Date().getFullYear();
 
-    const chips = document.querySelectorAll('.chip[data-filter]');
-    const cards = document.querySelectorAll('.skill-card');
+    // filtering
+    const chips = document.querySelectorAll(".chip[data-filter]");
+    const items = document.querySelectorAll("#skillsGrid a");
 
     function setActiveChip(active) {
-      chips.forEach(c => c.classList.toggle('chip-active', c === active));
+      chips.forEach(c => c.classList.toggle("chip-active", c === active));
     }
 
     chips.forEach(chip => {
-      chip.addEventListener('click', () => {
+      chip.addEventListener("click", () => {
         setActiveChip(chip);
-        const f = chip.getAttribute('data-filter');
-        cards.forEach(card => {
-          card.style.display =
-            (f === 'all' || card.dataset.cat === f) ? '' : 'none';
+        const filter = chip.getAttribute("data-filter");
+
+        items.forEach(item => {
+          const cat = item.getAttribute("data-cat");
+          item.style.display =
+            filter === "all" || cat === filter ? "" : "none";
         });
       });
     });
