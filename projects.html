@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brynn Morrow – Projects</title>
+  <title>Brynn Morrow – Portfolio</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,222 +17,429 @@
   <header class="bg-white shadow">
     <div class="container mx-auto px-6 py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
       <h1 class="text-3xl font-bold">
-        <a href="index.html" class="custom-text">Brynn Morrow</a>
+        <a href="index.html" class="custom-text">
+          Brynn Morrow
+        </a>
       </h1>
+
       <nav class="flex flex-wrap gap-x-6 gap-y-2 text-lg">
-        <a href="projects.html" class="nav-link font-bold underline">Projects</a>
+        <a href="projects.html" class="nav-link">Projects</a>
         <a href="skills.html" class="nav-link">Skills</a>
         <a href="experience.html" class="nav-link">Experience</a>
         <a href="education.html" class="nav-link">Education</a>
-        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="container mx-auto my-12 p-6 bg-white rounded shadow">
-    <section class="mb-8">
-      <h2 class="animated-text text-4xl font-bold">Projects</h2>
-      <p class="text-neutral-600 mt-2">A gallery of my work in GIS, spatial modeling, and cartography.</p>
-    </section>
+  <main class="container mx-auto px-6 py-12">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-6">
+      <div>
+        <h2 class="text-4xl font-bold mb-2">Projects</h2>
+        <p class="text-gray-600 max-w-2xl">
+          A collection of my GIS analysis, spatial modeling, and cartographic design work.
+        </p>
+      </div>
 
-    <div id="filterBanner" class="hidden mb-6">
-      <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 inline-flex items-center gap-2">
-        <span class="text-blue-700 font-semibold">Filtering by: <strong id="filterName"></strong></span>
-        <button id="clearFilter" class="ml-4 text-sm underline text-blue-600 font-bold">Clear Filter</button>
+      <div class="flex flex-wrap items-center gap-4">
+        <div>
+          <label for="sortSelect" class="block text-xs font-semibold uppercase text-gray-500 mb-1">Sort By</label>
+          <select id="sortSelect" class="bg-white border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+            <option value="alphabetical">A – Z</option>
+          </select>
+        </div>
       </div>
     </div>
 
-    <div class="flex flex-col sm:flex-row sm:items-center gap-3 mb-8">
-      <label for="sortSelect" class="text-sm font-semibold uppercase tracking-wider text-gray-500">Sort by Date:</label>
-      <select id="sortSelect" class="p-2 border rounded-md text-sm">
-        <option value="newest">Newest First</option>
-        <option value="oldest">Oldest First</option>
-      </select>
+    <div id="filterBanner" class="hidden mb-8 bg-blue-50 border border-blue-200 p-4 rounded-lg flex items-center justify-between">
+      <p class="text-blue-800">
+        Showing projects for skill: <span id="activeFilterName" class="font-bold"></span>
+      </p>
+      <button id="clearFilterBtn" class="text-sm font-bold text-blue-600 hover:text-blue-800 underline">
+        Clear Filter
+      </button>
     </div>
 
-    <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <article class="project-card p-6 rounded-2xl border border-gray-100 shadow-sm transition-all hover:shadow-md" 
-               data-skills="arcgis-pro cartographic-modeling spatial-overlay suitability-analysis decision-support" 
-               data-date="2025-12-05">
-        <h3 class="text-xl font-bold mb-2">Park Site Selection & Suitability Modeling</h3>
-        <p class="text-gray-600 text-sm mb-4">
-          Built a multi-criteria decision model to identify optimal park locations by integrating land ownership, terrain slope, and environmental restrictions.
-        </p>
-        <div class="flex justify-between items-center">
-          <span class="text-xs font-mono text-gray-400">Dec 2025</span>
-          <a href="project-park-selection.html" class="text-blue-600 font-bold hover:underline">View Details &rarr;</a>
+      <div class="project-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow flex flex-col"
+           data-date="2025-12-01"
+           data-title="Park Site Selection & Suitability Analysis"
+           data-skills="arcgis-pro cartographic-modeling spatial-overlay suitability-analysis decision-support">
+        <div class="p-6 flex-grow">
+          <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">GIS Analysis</div>
+          <h3 class="text-xl font-bold mb-3">Park Site Selection & Suitability Analysis</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Built a constraint-based spatial decision model integrating land ownership, terrain slope, and hydrology to identify optimal park locations.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <span class="chip">ArcGIS Pro</span>
+            <span class="chip">Suitability Analysis</span>
+          </div>
         </div>
-      </article>
+        <div class="px-6 py-4 bg-gray-50 border-t">
+          <a href="project-park-selection.html" class="text-blue-600 font-bold hover:underline inline-flex items-center">
+            View Details <span class="ml-1">→</span>
+          </a>
+        </div>
+      </div>
 
-      <article class="project-card p-6 rounded-2xl border border-gray-100 shadow-sm transition-all hover:shadow-md" 
-               data-skills="arcgis-pro hydrology raster-analysis modeling land-cover" 
-               data-date="2025-11-15">
-        <h3 class="text-xl font-bold mb-2">Watershed Analysis & Hydrologic Modeling</h3>
-        <p class="text-gray-600 text-sm mb-4">
-          Delineated watershed boundaries and extracted stream networks from DEMs to analyze land-cover composition and environmental impacts.
-        </p>
-        <div class="flex justify-between items-center">
-          <span class="text-xs font-mono text-gray-400">Nov 2025</span>
-          <a href="project_watershed_hydrology.html" class="text-blue-600 font-bold hover:underline">View Details &rarr;</a>
+      <div class="project-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow flex flex-col"
+           data-date="2025-11-15"
+           data-title="Watershed Analysis & Hydrologic Modeling"
+           data-skills="arcgis-pro hydrology zonal-statistics dem-processing raster-analysis">
+        <div class="p-6 flex-grow">
+          <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">Hydrology</div>
+          <h3 class="text-xl font-bold mb-3">Watershed Analysis & Hydrologic Modeling</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Processed high-resolution DEMs to extract stream networks and delineate boundaries, summarizing land cover composition using zonal statistics.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">ArcGIS Pro</span>
+            <span class="chip">Hydrology</span>
+          </div>
         </div>
-      </article>
+        <div class="px-6 py-4 bg-gray-50 border-t">
+          <a href="project_watershed_hydrology.html" class="text-blue-600 font-bold hover:underline inline-flex items-center">
+            View Details <span class="ml-1">→</span>
+          </a>
+        </div>
+      </div>
 
-      <article class="project-card p-6 rounded-2xl border border-gray-100 shadow-sm transition-all hover:shadow-md" 
-               data-skills="arcgis-pro gis attribute-tables joins-&-relates spatial-data-analysis cartography" 
-               data-date="2025-10-10">
-        <h3 class="text-xl font-bold mb-2">Attribute-Driven Spatial Analysis</h3>
-        <p class="text-gray-600 text-sm mb-4">
-          Performed advanced table operations and compound logical queries to normalize raw data into rates and indices for demographic analysis.
-        </p>
-        <div class="flex justify-between items-center">
-          <span class="text-xs font-mono text-gray-400">Oct 2025</span>
-          <a href="projects_attributeanalysis_operations.html" class="text-blue-600 font-bold hover:underline">View Details &rarr;</a>
+      <div class="project-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow flex flex-col"
+           data-date="2025-11-01"
+           data-title="Attribute-Driven Spatial Analysis & Table Operations"
+           data-skills="arcgis-pro attribute-tables joins-relates spatial-data-analysis cartography">
+        <div class="p-6 flex-grow">
+          <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">Data Science</div>
+          <h3 class="text-xl font-bold mb-3">Attribute-Driven Spatial Analysis & Table Operations</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Performed advanced attribute operations, including field normalization and multi-criteria queries to identify demographic and economic patterns.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">ArcGIS Pro</span>
+            <span class="chip">Attribute Tables</span>
+          </div>
         </div>
-      </article>
+        <div class="px-6 py-4 bg-gray-50 border-t">
+          <a href="projects_attributeanalysis_operations.html" class="text-blue-600 font-bold hover:underline inline-flex items-center">
+            View Details <span class="ml-1">→</span>
+          </a>
+        </div>
+      </div>
 
-      <article class="project-card p-6 rounded-2xl border border-gray-100 shadow-sm transition-all hover:shadow-md" 
-               data-skills="arcgis-pro raster-analysis cost-surface-modeling map-algebra spatial-modeling cartography" 
-               data-date="2025-05-15">
-        <h3 class="text-xl font-bold mb-2">Raster-Based Cost Surface Modeling</h3>
-        <p class="text-gray-600 text-sm mb-4">
-          Constructed a multi-layer cost surface integrating terrain slope and distance to transportation to model real-world access costs.
-        </p>
-        <div class="flex justify-between items-center">
-          <span class="text-xs font-mono text-gray-400">May 2025</span>
-          <a href="project_raster_costsurface_suitability.html" class="text-blue-600 font-bold hover:underline">View Details &rarr;</a>
+      <div class="project-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow flex flex-col"
+           data-date="2025-10-20"
+           data-title="Cartographic Design & Spatial Data Management"
+           data-skills="arcgis-pro cartography spatial-data-management visualization">
+        <div class="p-6 flex-grow">
+          <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">Cartography</div>
+          <h3 class="text-xl font-bold mb-3">Cartographic Design & Spatial Data Management</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Created professional map layouts in ArcGIS Pro, managing spatial data storage within geodatabases and feature datasets.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">ArcGIS Pro</span>
+            <span class="chip">Cartography</span>
+          </div>
         </div>
-      </article>
+        <div class="px-6 py-4 bg-gray-50 border-t">
+          <a href="project_cartdesign_spatialmanagement.html" class="text-blue-600 font-bold hover:underline inline-flex items-center">
+            View Details <span class="ml-1">→</span>
+          </a>
+        </div>
+      </div>
 
-      <article class="project-card p-6 rounded-2xl border border-gray-100 shadow-sm transition-all hover:shadow-md" 
-               data-skills="arcgis-pro raster-analysis hydrology viewshed-analysis terrain-profiles gis-modeling" 
-               data-date="2025-05-10">
-        <h3 class="text-xl font-bold mb-2">Terrain & Watershed Analysis (Raster)</h3>
-        <p class="text-gray-600 text-sm mb-4">
-          Derived stream networks and performed visibility modeling using geodesic viewshed tools to evaluate obstructed terrain.
-        </p>
-        <div class="flex justify-between items-center">
-          <span class="text-xs font-mono text-gray-400">May 2025</span>
-          <a href="project_terrain_watershed_raster.html" class="text-blue-600 font-bold hover:underline">View Details &rarr;</a>
+      <div class="project-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow flex flex-col"
+           data-date="2025-10-05"
+           data-title="Digitizing & Vector Data Creation"
+           data-skills="arcgis-pro digitizing vector-data-creation topological-editing cartography">
+        <div class="p-6 flex-grow">
+          <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">Data Creation</div>
+          <h3 class="text-xl font-bold mb-3">Digitizing & Vector Data Creation</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Converted raster imagery into structured vector datasets for land-cover mapping, applying snapping and topological editing techniques.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">ArcGIS Pro</span>
+            <span class="chip">Digitizing</span>
+          </div>
         </div>
-      </article>
+        <div class="px-6 py-4 bg-gray-50 border-t">
+          <a href="project_digitize_vector.html" class="text-blue-600 font-bold hover:underline inline-flex items-center">
+            View Details <span class="ml-1">→</span>
+          </a>
+        </div>
+      </div>
 
-      <article class="project-card p-6 rounded-2xl border border-gray-100 shadow-sm transition-all hover:shadow-md" 
-               data-skills="arcgis-pro spatial-sampling raster-analysis interpolation geostatistics cartography gis" 
-               data-date="2025-04-25">
-        <h3 class="text-xl font-bold mb-2">Spatial Sampling & Interpolation</h3>
-        <p class="text-gray-600 text-sm mb-4">
-          Generated continuous surfaces using Kriging and IDW, evaluating model performance through cross-validation diagnostics.
-        </p>
-        <div class="flex justify-between items-center">
-          <span class="text-xs font-mono text-gray-400">Apr 2025</span>
-          <a href="project_sampling_interpolation.html" class="text-blue-600 font-bold hover:underline">View Details &rarr;</a>
+      <div class="project-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow flex flex-col"
+           data-date="2025-09-20"
+           data-title="Map Projections & Coordinate Systems Analysis"
+           data-skills="arcgis-pro map-projections coordinate-systems spatial-accuracy cartography">
+        <div class="p-6 flex-grow">
+          <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">Geodesy</div>
+          <h3 class="text-xl font-bold mb-3">Map Projections & Coordinate Systems Analysis</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Evaluated projection-induced distortion by comparing Albers Equal Area, UTM, and Mercator systems through planar and geodesic calculations.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">ArcGIS Pro</span>
+            <span class="chip">Map Projections</span>
+          </div>
         </div>
-      </article>
+        <div class="px-6 py-4 bg-gray-50 border-t">
+          <a href="project_projection_coordinatesystem.html" class="text-blue-600 font-bold hover:underline inline-flex items-center">
+            View Details <span class="ml-1">→</span>
+          </a>
+        </div>
+      </div>
 
-      <article class="project-card p-6 rounded-2xl border border-gray-100 shadow-sm transition-all hover:shadow-md" 
-               data-skills="arcgis-pro gis spatial-modeling buffering-&-overlay suitability-analysis cartography" 
-               data-date="2025-04-10">
-        <h3 class="text-xl font-bold mb-2">Spatial Suitability: Buffering & Overlay</h3>
-        <p class="text-gray-600 text-sm mb-4">
-          Built multi-stage suitability models using union and erase overlays to identify candidate campground locations.
-        </p>
-        <div class="flex justify-between items-center">
-          <span class="text-xs font-mono text-gray-400">Apr 2025</span>
-          <a href="project_spatialsuitability_buffering_overlay.html" class="text-blue-600 font-bold hover:underline">View Details &rarr;</a>
+      <div class="project-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow flex flex-col"
+           data-date="2025-09-05"
+           data-title="Raster-Based Cost Surface Modeling & Suitability"
+           data-skills="arcgis-pro raster-analysis cost-surface-modeling map-algebra spatial-modeling">
+        <div class="p-6 flex-grow">
+          <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">Advanced Raster</div>
+          <h3 class="text-xl font-bold mb-3">Raster-Based Cost Surface Modeling & Suitability</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Constructed multi-layer cost surfaces using raster algebra to model construction costs based on terrain and transportation networks.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">ArcGIS Pro</span>
+            <span class="chip">Raster Analysis</span>
+          </div>
         </div>
-      </article>
+        <div class="px-6 py-4 bg-gray-50 border-t">
+          <a href="project_raster_costsurface_suitability.html" class="text-blue-600 font-bold hover:underline inline-flex items-center">
+            View Details <span class="ml-1">→</span>
+          </a>
+        </div>
+      </div>
 
-      <article class="project-card p-6 rounded-2xl border border-gray-100 shadow-sm transition-all hover:shadow-md" 
-               data-skills="arcgis-pro gis spatial-selection table-joins data-aggregation cartography data-integration" 
-               data-date="2025-03-20">
-        <h3 class="text-xl font-bold mb-2">Spatial Selection & Table Integration</h3>
-        <p class="text-gray-600 text-sm mb-4">
-          Integrated external tabular datasets with spatial features using join keys to analyze production and demographic trends.
-        </p>
-        <div class="flex justify-between items-center">
-          <span class="text-xs font-mono text-gray-400">Mar 2025</span>
-          <a href="project_selection_relational_integration.html" class="text-blue-600 font-bold hover:underline">View Details &rarr;</a>
+      <div class="project-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow flex flex-col"
+           data-date="2025-08-15"
+           data-title="Spatial Sampling & Interpolation of Environmental Data"
+           data-skills="arcgis-pro spatial-sampling interpolation geostatistics raster-analysis">
+        <div class="p-6 flex-grow">
+          <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">Geostatistics</div>
+          <h3 class="text-xl font-bold mb-3">Spatial Sampling & Interpolation of Environmental Data</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Generated continuous environmental surfaces using IDW, Kriging, and Thiessen polygons, evaluating performance with RMSE diagnostics.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">ArcGIS Pro</span>
+            <span class="chip">Interpolation</span>
+          </div>
         </div>
-      </article>
+        <div class="px-6 py-4 bg-gray-50 border-t">
+          <a href="project_sampling_interpolation.html" class="text-blue-600 font-bold hover:underline inline-flex items-center">
+            View Details <span class="ml-1">→</span>
+          </a>
+        </div>
+      </div>
 
-      <article class="project-card p-6 rounded-2xl border border-gray-100 shadow-sm transition-all hover:shadow-md" 
-               data-skills="arcgis-pro gis topology digitizing geodatabases spatial-data-quality" 
-               data-date="2025-03-05">
-        <h3 class="text-xl font-bold mb-2">Topology-Driven Digitization</h3>
-        <p class="text-gray-600 text-sm mb-4">
-          Enforced geodatabase topology rules to ensure consistent feature relationships across complex vegetation layers.
-        </p>
-        <div class="flex justify-between items-center">
-          <span class="text-xs font-mono text-gray-400">Mar 2025</span>
-          <a href="project_topology_digitize.html" class="text-blue-600 font-bold hover:underline">View Details &rarr;</a>
+      <div class="project-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow flex flex-col"
+           data-date="2025-08-01"
+           data-title="Spatial Selection & Relational Table Integration"
+           data-skills="arcgis-pro spatial-selection table-joins data-aggregation cartography">
+        <div class="p-6 flex-grow">
+          <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">Data Integration</div>
+          <h3 class="text-xl font-bold mb-3">Spatial Selection & Relational Table Integration</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Linked tabular datasets to spatial features using complex join keys to visualize U.S. agricultural production and California demographics.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">ArcGIS Pro</span>
+            <span class="chip">Spatial Selection</span>
+          </div>
         </div>
-      </article>
+        <div class="px-6 py-4 bg-gray-50 border-t">
+          <a href="project_selection_relational_integration.html" class="text-blue-600 font-bold hover:underline inline-flex items-center">
+            View Details <span class="ml-1">→</span>
+          </a>
+        </div>
+      </div>
 
-      <article class="project-card p-6 rounded-2xl border border-gray-100 shadow-sm transition-all hover:shadow-md" 
-               data-skills="arcgis-pro gis map-projections coordinate-systems spatial-accuracy cartography" 
-               data-date="2025-01-20">
-        <h3 class="text-xl font-bold mb-2">Map Projections & Coordinates</h3>
-        <p class="text-gray-600 text-sm mb-4">
-          Analyzed planar vs. geodesic distance calculations to demonstrate distortion effects across multiple coordinate systems.
-        </p>
-        <div class="flex justify-between items-center">
-          <span class="text-xs font-mono text-gray-400">Jan 2025</span>
-          <a href="project_projection_coordinatesystem.html" class="text-blue-600 font-bold hover:underline">View Details &rarr;</a>
+      <div class="project-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow flex flex-col"
+           data-date="2025-07-15"
+           data-title="Digital Spatial Data Integration & Cartographic Analysis"
+           data-skills="arcgis-pro spatial-data-integration attribute-tables cartography dem-hydrology">
+        <div class="p-6 flex-grow">
+          <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">Visual Analysis</div>
+          <h3 class="text-xl font-bold mb-3">Digital Spatial Data Integration & Cartographic Analysis</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Integrated NHD, DEM, and wetland inventories into ArcGIS Pro to design multi-panel analytical products like shaded-relief and density maps.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">ArcGIS Pro</span>
+            <span class="chip">Data Integration</span>
+          </div>
         </div>
-      </article>
+        <div class="px-6 py-4 bg-gray-50 border-t">
+          <a href="project_spatialintegration_cartographic.html" class="text-blue-600 font-bold hover:underline inline-flex items-center">
+            View Details <span class="ml-1">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow flex flex-col"
+           data-date="2025-07-01"
+           data-title="Spatial Suitability Modeling Using Buffering & Overlay"
+           data-skills="arcgis-pro spatial-modeling buffering-overlay suitability-analysis cartography">
+        <div class="p-6 flex-grow">
+          <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">Spatial Logic</div>
+          <h3 class="text-xl font-bold mb-3">Spatial Suitability Modeling Using Buffering & Overlay</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Identified campground locations by combining attribute-driven variable buffers with transportation masks and multipart geometry conversion.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">ArcGIS Pro</span>
+            <span class="chip">Buffering & Overlay</span>
+          </div>
+        </div>
+        <div class="px-6 py-4 bg-gray-50 border-t">
+          <a href="project_spatialsuitability_buffering_overlay.html" class="text-blue-600 font-bold hover:underline inline-flex items-center">
+            View Details <span class="ml-1">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow flex flex-col"
+           data-date="2025-06-15"
+           data-title="Terrain, Watershed & Visibility Analysis Using Raster GIS"
+           data-skills="arcgis-pro raster-analysis hydrology viewshed-analysis terrain-profiles">
+        <div class="p-6 flex-grow">
+          <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">Terrain Analysis</div>
+          <h3 class="text-xl font-bold mb-3">Terrain, Watershed & Visibility Analysis Using Raster GIS</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Conducted visibility modeling using viewsheds and line-of-sight paths, and derived stream networks via pit filling and flow accumulation.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">ArcGIS Pro</span>
+            <span class="chip">Raster Analysis</span>
+          </div>
+        </div>
+        <div class="px-6 py-4 bg-gray-50 border-t">
+          <a href="project_terrain_watershed_raster.html" class="text-blue-600 font-bold hover:underline inline-flex items-center">
+            View Details <span class="ml-1">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow flex flex-col"
+           data-date="2025-06-01"
+           data-title="Topology-Driven Digitization of Natural Features"
+           data-skills="arcgis-pro topology digitizing geodatabases spatial-data-quality">
+        <div class="p-6 flex-grow">
+          <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">Quality Control</div>
+          <h3 class="text-xl font-bold mb-3">Topology-Driven Digitization of Natural Features</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Enforced geodatabase topology rules to digitize seasonal aquatic vegetation, validating errors with the ArcGIS Error Inspector.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">ArcGIS Pro</span>
+            <span class="chip">Topology</span>
+          </div>
+        </div>
+        <div class="px-6 py-4 bg-gray-50 border-t">
+          <a href="project_topology_digitize.html" class="text-blue-600 font-bold hover:underline items-center">
+            View Details <span class="ml-1">→</span>
+          </a>
+        </div>
+      </div>
 
     </div>
   </main>
 
-  <footer class="bg-white p-8 mt-12 border-t text-center">
-    <p class="text-gray-500 text-sm">&copy; <span id="year"></span> Brynn Morrow</p>
+  <footer class="bg-white p-6 mt-12 shadow-inner">
+    <div class="container mx-auto px-6">
+      <p class="text-sm text-gray-600">
+        &copy; <span id="year"></span> Brynn Morrow
+      </p>
+    </div>
   </footer>
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const grid = document.getElementById("projectsGrid");
-      const cards = Array.from(document.querySelectorAll(".project-card"));
-      const sortSelect = document.getElementById("sortSelect");
-      const banner = document.getElementById("filterBanner");
-      const filterName = document.getElementById("filterName");
-      const clearBtn = document.getElementById("clearFilter");
+    // Set Year
+    const y = document.getElementById("year");
+    if (y) y.textContent = new Date().getFullYear();
 
-      // Set current year
-      const y = document.getElementById("year");
-      if (y) y.textContent = new Date().getFullYear();
+    const projectsGrid = document.getElementById("projectsGrid");
+    const allCards = Array.from(document.querySelectorAll(".project-card"));
+    const sortSelect = document.getElementById("sortSelect");
+    
+    const banner = document.getElementById("filterBanner");
+    const filterName = document.getElementById("activeFilterName");
+    const clearBtn = document.getElementById("clearFilterBtn");
 
-      // Sorting Logic
-      function sortCards(order) {
-        const sorted = cards.sort((a, b) => {
-          const dateA = new Date(a.dataset.date);
-          const dateB = new Date(b.dataset.date);
-          return order === "newest" ? dateB - dateA : dateA - dateB;
-        });
-        sorted.forEach(card => grid.appendChild(card));
+    // URL parameters for skill filtering
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedSkill = urlParams.get("skill");
+    const selectedLabel = urlParams.get("label");
+
+    function applySort(criteria) {
+      const sorted = [...allCards].sort((a, b) => {
+        if (criteria === "newest") {
+          return new Date(b.dataset.date) - new Date(a.dataset.date);
+        } else if (criteria === "oldest") {
+          return new Date(a.dataset.date) - new Date(b.dataset.date);
+        } else if (criteria === "alphabetical") {
+          return a.dataset.title.localeCompare(b.dataset.title);
+        }
+        return 0;
+      });
+      sorted.forEach(card => projectsGrid.appendChild(card));
+    }
+
+    function showAll() {
+      allCards.forEach(c => (c.style.display = ""));
+      if (banner) banner.classList.add("hidden");
+
+      if (history.replaceState) {
+        const cleanUrl = window.location.pathname;
+        history.replaceState({}, "", cleanUrl);
       }
+    }
 
-      // Filter Logic
-      const params = new URLSearchParams(window.location.search);
-      const skillFilter = params.get("skill");
-      const skillLabel = params.get("label");
+    function filterBy(skillKey, label) {
+      let anyShown = false;
 
-      if (skillFilter) {
-        cards.forEach(card => {
-          const skills = card.dataset.skills.toLowerCase().split(" ");
-          card.style.display = skills.includes(skillFilter.toLowerCase()) ? "block" : "none";
-        });
+      allCards.forEach(card => {
+        const skills = (card.getAttribute("data-skills") || "")
+          .toLowerCase()
+          .split(/\s+/)
+          .filter(Boolean);
+
+        const match = skills.includes(skillKey);
+        card.style.display = match ? "" : "none";
+        if (match) anyShown = true;
+      });
+
+      if (banner && filterName) {
+        filterName.textContent = label || skillKey;
         banner.classList.remove("hidden");
-        filterName.textContent = skillLabel || skillFilter;
       }
 
-      // Listeners
-      sortSelect.addEventListener("change", (e) => sortCards(e.target.value));
-      clearBtn.addEventListener("click", () => window.location.href = "projects.html");
+      if (!anyShown) showAll();
+    }
 
-      // Initial Sort
-      sortCards("newest");
-    });
+    // Initial sort (default newest)
+    const initialSort = (sortSelect && sortSelect.value) ? sortSelect.value : "newest";
+    applySort(initialSort);
+
+    // Initial filter from URL
+    if (selectedSkill) {
+      filterBy(selectedSkill, selectedLabel);
+    }
+
+    // Event Listeners
+    if (sortSelect) {
+      sortSelect.addEventListener("change", (e) => applySort(e.target.value));
+    }
+    if (clearBtn) {
+      clearBtn.addEventListener("click", showAll);
+    }
   </script>
 </body>
 </html>
