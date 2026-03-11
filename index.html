@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brynn Morrow | CS + GIS Portfolio</title>
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
+  <link rel="stylesheet" href="style.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lora:italic,wght@0,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+  <header class="bg-white border-b border-gray-100 sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold tracking-tight">
+        <a href="index.html" class="hover:text-blue-600 transition-colors">
+          Brynn Morrow
+        </a>
+      </h1>
+
+      <nav class="hidden md:flex gap-x-8 text-sm font-medium uppercase tracking-widest">
+        <a href="projects.html" class="hover:text-blue-600 transition-colors">Projects</a>
+        <a href="skills.html" class="hover:text-blue-600 transition-colors">Skills</a>
+        <a href="experience.html" class="hover:text-blue-600 transition-colors">Experience</a>
+        <a href="contact.html" class="hover:text-blue-600 transition-colors">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto mt-12 mb-20 px-6 max-w-6xl">
+    <section class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+      
+      <div class="w-full md:w-1/2">
+        <div class="relative">
+          <div class="absolute -bottom-4 -right-4 w-full h-full bg-blue-100 rounded-2xl -z-10"></div>
+          <img src="images/BM_Headshot1.JPEG"
+               alt="Brynn Morrow"
+               class="w-full aspect-square object-cover rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+        </div>
+      </div>
+
+      <div class="w-full md:w-1/2 space-y-8">
+        <div>
+          <p class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-2">CS Major & GIS Minor</p>
+          <h2 class="text-5xl md:text-6xl font-bold leading-tight">
+            Bridging Logic and <span class="italic font-serif text-blue-900">Location.</span>
+          </h2>
+        </div>
+
+        <p class="text-xl text-gray-700 leading-relaxed font-light">
+          I apply algorithmic logic to ArcGIS Pro workflows, utilizing **topology-driven digitization** and **hydrologic modeling** to turn raw spatial data into precise, engineering-ready stories.
+        </p>
+
+        <div class="flex flex-wrap gap-4 pt-4">
+          <a href="projects.html" class="bg-black text-white px-8 py-4 rounded-full font-bold hover:bg-blue-600 transition-all shadow-lg">
+            Explore My Work
+          </a>
+          <a href="BrynnMorrow_Resume2026.pdf" class="border-2 border-black px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all">
+            Download Resume
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24 border-t border-gray-200 pt-16">
+      <div class="space-y-4">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-blue-600">The CS Edge</h3>
+        <p class="text-gray-600">Utilizing Python, SQL, and Java to automate spatial pipelines and ensure scalable data management.</p>
+      </div>
+      <div class="space-y-4">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-blue-600">Precision GIS</h3>
+        <p class="text-gray-600">Expertise in enforcing geodatabase topology and validating spatial integrity via ArcGIS Pro Error Inspector.</p>
+      </div>
+      <div class="space-y-4">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-blue-600">Collaboration</h3>
+        <p class="text-gray-600">Proven leadership as a Student Supervisor, managing real-time data accuracy and performance.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white py-12 border-t border-gray-100">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+      <p class="text-sm text-gray-500 font-medium">
+        &copy; 2026 Brynn Morrow | Minneapolis, MN
+      </p>
+      
+      <div class="flex gap-8">
+        <a href="https://linkedin.com/in/brynn-morrow/" class="text-gray-400 hover:text-blue-600 transition-colors">LinkedIn</a>
+        <a href="https://github.com/brynnmorrow" class="text-gray-400 hover:text-black transition-colors">GitHub</a>
+        <a href="contact.html" class="text-gray-400 hover:text-blue-600 transition-colors">Email</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
