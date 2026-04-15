@@ -3,78 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brynn Morrow | CS + GIS Portfolio</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lora:italic,wght@0,400;1,700&display=swap" rel="stylesheet">
+  <title>Brynn Morrow | CS & GIS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:italic,wght@0,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 text-slate-900 font-sans">
+<body class="bg-slate-50 text-slate-900">
 
-  <header class="bg-white border-b border-gray-100 sticky top-0 z-50">
+  <header class="bg-white/80 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold tracking-tight">
+      <h1 class="text-xl font-bold tracking-tighter uppercase">
         <a href="index.html" class="hover:text-emerald-600 transition-colors">Brynn Morrow</a>
       </h1>
-      <nav class="hidden md:flex gap-x-8 text-sm font-medium uppercase tracking-widest">
-        <a href="projects.html" class="hover:text-emerald-600 transition-colors">Projects</a>
-        <a href="experience.html" class="hover:text-emerald-600 transition-colors">Experience</a>
-        <a href="education.html" class="hover:text-emerald-600 transition-colors">Education</a>
-        <a href="contact.html" class="hover:text-emerald-600 transition-colors">Contact</a>
+      <nav class="hidden md:flex gap-x-8 text-xs font-bold uppercase tracking-widest">
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="education.html" class="nav-link text-emerald-600">Education</a>
       </nav>
     </div>
   </header>
 
-  <main class="container mx-auto mt-12 mb-20 px-6 max-w-6xl">
-    <section class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
-      <div class="w-full md:w-1/2">
-        <div class="relative inline-block w-full">
-            <div class="absolute -bottom-6 -right-6 w-full h-full bg-emerald-50 rounded-2xl -z-10"></div>
-            <img src="images/BrynnMorrow.jpeg" alt="Brynn Morrow" class="relative z-10 w-full aspect-square object-cover rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
-        </div>
+  <main class="container mx-auto mt-16 mb-24 px-6 max-w-6xl">
+    <div class="flex flex-col md:flex-row items-center gap-16">
+      <div class="w-full md:w-5/12 relative">
+        <div class="absolute -bottom-6 -right-6 w-full h-full bg-emerald-100 rounded-2xl -z-10"></div>
+        <img src="images/BrynnMorrow.jpeg" alt="Brynn Morrow" class="profile-img relative z-10 w-full aspect-square object-cover rounded-2xl shadow-2xl">
       </div>
 
-      <div class="w-full md:w-1/2 space-y-8">
-        <div>
-          <p class="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-2">CS Major & GIS Minor</p>
-          <h2 class="text-5xl md:text-6xl font-bold leading-tight">
-            Brynn <span class="italic font-serif text-emerald-900">Morrow</span>
-          </h2>
-        </div>
-        <p class="text-xl text-slate-700 leading-relaxed font-light">
-          Computer Science student at the University of Minnesota specializing in the intersection of software development and Geographic Information Science.
+      <div class="w-full md:w-7/12 space-y-6">
+        <p class="text-emerald-600 font-bold uppercase tracking-[0.2em] text-sm">Computer Science & GIS @ UMN</p>
+        <h2 class="text-6xl font-bold leading-none tracking-tight">
+          Building <span class="italic font-serif text-emerald-900">Spatial</span> <br>Intelligence.
+        </h2>
+        <p class="text-xl text-slate-600 leading-relaxed font-light max-w-xl">
+          Specializing in the automation of geospatial pipelines and the development of functional data tools. Bridging the gap between scalable software engineering and high-fidelity spatial analysis.
         </p>
         <div class="flex flex-wrap gap-4 pt-4">
-          <a href="projects.html" class="bg-emerald-900 text-white px-8 py-4 rounded-full font-bold hover:bg-emerald-700 transition-all shadow-lg">View Projects</a>
-          <a href="BrynnMorrow_Resume2026.pdf" class="border-2 border-emerald-900 text-emerald-900 px-8 py-4 rounded-full font-bold hover:bg-emerald-50 transition-all">Download Resume</a>
+          <a href="projects.html" class="bg-emerald-900 text-white px-8 py-4 rounded-full font-bold hover:bg-emerald-800 transition-all shadow-xl hover:shadow-emerald-900/20">Technical Portfolio</a>
+          <a href="BrynnMorrow_Resume2026.pdf" class="border-2 border-emerald-900 text-emerald-900 px-8 py-4 rounded-full font-bold hover:bg-emerald-50 transition-all">Download CV</a>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24 border-t border-gray-200 pt-16">
-      <div class="space-y-4">
-        <h3 class="text-xs font-bold uppercase tracking-widest text-emerald-600">Computer Science</h3>
-        <p class="text-slate-600 text-sm italic">Automating spatial pipelines and managing scalable data using Python, SQL, and Java.</p>
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-32 border-t border-slate-200 pt-16">
+      <div class="group">
+        <div class="w-12 h-1 bg-emerald-600 mb-6 group-hover:w-full transition-all duration-500"></div>
+        <h3 class="font-bold text-lg mb-2">Software Engineering</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Developing robust back-end systems using Python and Java, focused on algorithmic efficiency and secure data handling.</p>
       </div>
-      <div class="space-y-4">
-        <h3 class="text-xs font-bold uppercase tracking-widest text-emerald-600">Geospatial Science</h3>
-        <p class="text-slate-600 text-sm italic">Enforcing geodatabase topology and validating spatial integrity via ArcGIS Pro.</p>
+      <div class="group">
+        <div class="w-12 h-1 bg-emerald-600 mb-6 group-hover:w-full transition-all duration-500"></div>
+        <h3 class="font-bold text-lg mb-2">Spatial Data Science</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Leveraging ArcGIS Pro and SQL for hydrologic modeling, watershed analysis, and complex geodatabase management.</p>
       </div>
-      <div class="space-y-4">
-        <h3 class="text-xs font-bold uppercase tracking-widest text-emerald-600">Leadership</h3>
-        <p class="text-slate-600 text-sm italic">Managing real-time data accuracy and team performance as a Student Supervisor.</p>
+      <div class="group">
+        <div class="w-12 h-1 bg-emerald-600 mb-6 group-hover:w-full transition-all duration-500"></div>
+        <h3 class="font-bold text-lg mb-2">Operational Leadership</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Directing student teams and deploying custom performance databases to ensure real-time data integrity.</p>
       </div>
     </section>
   </main>
 
-  <footer class="bg-white py-12 border-t border-gray-100">
-    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 text-sm text-gray-500 font-medium">
-      <p>&copy; 2026 Brynn Morrow | Minneapolis, MN</p>
-      <div class="flex gap-8 uppercase tracking-widest">
+  <footer class="bg-white py-16 border-t border-slate-100">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="text-center md:text-left">
+        <p class="text-sm font-bold text-slate-900 mb-1">&copy; 2026 BRYNN MORROW</p>
+        <p class="text-xs text-slate-400 uppercase tracking-widest">Minneapolis, Minnesota</p>
+      </div>
+      <div class="flex gap-12 text-xs font-bold uppercase tracking-widest">
         <a href="https://linkedin.com/in/brynn-morrow/" class="hover:text-emerald-600 transition-colors">LinkedIn</a>
         <a href="https://github.com/brynnmorrow" class="hover:text-emerald-900 transition-colors">GitHub</a>
         <a href="contact.html" class="hover:text-emerald-600 transition-colors">Contact</a>
       </div>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
