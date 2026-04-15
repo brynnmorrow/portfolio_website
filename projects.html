@@ -18,9 +18,10 @@
       </h1>
       <nav class="hidden md:flex gap-x-8 text-xs font-bold uppercase tracking-widest">
         <a href="projects.html" class="text-emerald-600">Projects</a>
-        <a href="skills.html" class="nav-link hover:text-emerald-600">Skills</a>
-        <a href="experience.html" class="nav-link hover:text-emerald-600">Experience</a>
-        <a href="education.html" class="nav-link hover:text-emerald-600">Education</a>
+        <a href="skills.html" class="nav-link hover:text-emerald-600 transition-colors">Skills</a>
+        <a href="experience.html" class="nav-link hover:text-emerald-600 transition-colors">Experience</a>
+        <a href="education.html" class="nav-link hover:text-emerald-600 transition-colors">Education</a>
+        <a href="contact.html" class="nav-link hover:text-emerald-600 transition-colors">Contact</a>
       </nav>
     </div>
   </header>
@@ -28,9 +29,10 @@
   <main class="container mx-auto px-6 py-12 max-w-7xl">
     <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-6">
       <div>
+        <p id="typeTarget" class="text-emerald-600 font-bold uppercase tracking-widest text-xs mb-2 min-h-[1rem]"></p>
         <h2 class="text-5xl font-bold mb-4">Technical <span class="italic font-serif text-emerald-900">Portfolio</span></h2>
         <p class="text-slate-600 max-w-2xl text-lg font-light">
-          A collection of Geospatial analysis, spatial modeling, and software engineering projects.
+          Core technical projects focusing on genomic algorithms, hydrologic modeling, and spatial decision support systems.
         </p>
       </div>
 
@@ -55,12 +57,78 @@
       </button>
     </div>
 
-    <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+      <div class="project-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-2xl hover:border-emerald-200 transition-all flex flex-col group"
+           data-date="2025-11-01"
+           data-title="Genomic Data Processing and Analysis"
+           data-skills="python r needleman-wunsch phylogenetic-trees computational-biology">
+        <div class="p-8 flex-grow">
+          <div class="text-[10px] font-bold text-emerald-600 uppercase tracking-[0.2em] mb-3">Software Engineering</div>
+          <h3 class="text-xl font-bold mb-3 group-hover:text-emerald-900 transition-colors">Genomic Data Processing & Analysis</h3>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6">
+            Developed Python pipelines to analyze SARS-CoV-2 sequences, implementing global sequence alignment and Neighbor-Joining algorithms for phylogenetic visualization.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <span class="px-3 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold uppercase rounded-md border border-slate-100">Python</span>
+            <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-[10px] font-bold uppercase rounded-md border border-emerald-100">Algorithms</span>
+          </div>
+        </div>
+        <div class="px-8 py-4 bg-slate-50/50 border-t border-slate-50 group-hover:bg-emerald-50 transition-colors">
+          <a href="#" class="text-emerald-900 text-xs font-bold uppercase tracking-widest flex items-center">
+            View Project Details <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-2xl hover:border-emerald-200 transition-all flex flex-col group"
+           data-date="2025-12-15"
+           data-title="Watershed Analysis & Hydrologic Modeling"
+           data-skills="arcgis-pro hydrology zonal-statistics dem-processing raster-analysis">
+        <div class="p-8 flex-grow">
+          <div class="text-[10px] font-bold text-emerald-600 uppercase tracking-[0.2em] mb-3">Hydrology</div>
+          <h3 class="text-xl font-bold mb-3 group-hover:text-emerald-900 transition-colors">Watershed Analysis & Hydrologic Modeling</h3>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6">
+            Processed high-resolution DEMs to extract stream networks and delineate boundaries, summarizing land cover composition using zonal statistics.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold uppercase rounded-md border border-slate-100">ArcGIS Pro</span>
+            <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-[10px] font-bold uppercase rounded-md border border-emerald-100">Hydrology</span>
+          </div>
+        </div>
+        <div class="px-8 py-4 bg-slate-50/50 border-t border-slate-50 group-hover:bg-emerald-50 transition-colors">
+          <a href="project_watershed_hydrology.html" class="text-emerald-900 text-xs font-bold uppercase tracking-widest flex items-center">
+            View Project Details <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-2xl hover:border-emerald-200 transition-all flex flex-col group"
+           data-date="2025-11-07"
+           data-title="Raster-Based Cost Surface Modeling & Suitability Analysis"
+           data-skills="arcgis-pro raster-analysis cost-surface-modeling map-algebra spatial-modeling">
+        <div class="p-8 flex-grow">
+          <div class="text-[10px] font-bold text-emerald-600 uppercase tracking-[0.2em] mb-3">Spatial Data Science</div>
+          <h3 class="text-xl font-bold mb-3 group-hover:text-emerald-900 transition-colors">Raster-Based Cost Surface Modeling</h3>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6">
+            Constructed multi-layer cost surfaces using raster algebra to model construction costs based on terrain and transportation networks.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold uppercase rounded-md border border-slate-100">Map Algebra</span>
+            <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-[10px] font-bold uppercase rounded-md border border-emerald-100">Raster Analysis</span>
+          </div>
+        </div>
+        <div class="px-8 py-4 bg-slate-50/50 border-t border-slate-50 group-hover:bg-emerald-50 transition-colors">
+          <a href="project_raster_costsurface_suitability.html" class="text-emerald-900 text-xs font-bold uppercase tracking-widest flex items-center">
+            View Project Details <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
 
       <div class="project-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-2xl hover:border-emerald-200 transition-all flex flex-col group"
            data-date="2025-12-19"
            data-title="Multi-Criteria Cartographic Modeling for Park Site Selection"
-           data-skills="arcgis-pro cartographic-modeling spatial-overlay suitability-analysis">
+           data-skills="arcgis-pro cartographic-modeling spatial-overlay suitability-analysis decision-support">
         <div class="p-8 flex-grow">
           <div class="text-[10px] font-bold text-emerald-600 uppercase tracking-[0.2em] mb-3">GIS Analysis</div>
           <h3 class="text-xl font-bold mb-3 group-hover:text-emerald-900 transition-colors">Park Site Suitability Modeling</h3>
@@ -68,23 +136,23 @@
             Built a constraint-based spatial decision model integrating land ownership, terrain slope, and hydrology to identify optimal park locations.
           </p>
           <div class="flex flex-wrap gap-2 mt-auto">
-            <span class="px-3 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold uppercase rounded-md border border-slate-100">ArcGIS Pro</span>
-            <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-[10px] font-bold uppercase rounded-md border border-emerald-100">Modeling</span>
+            <span class="px-3 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold uppercase rounded-md border border-slate-100">Suitability</span>
+            <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-[10px] font-bold uppercase rounded-md border border-emerald-100">GIS Logic</span>
           </div>
         </div>
         <div class="px-8 py-4 bg-slate-50/50 border-t border-slate-50 group-hover:bg-emerald-50 transition-colors">
           <a href="project-park-selection.html" class="text-emerald-900 text-xs font-bold uppercase tracking-widest flex items-center">
-            View Case Study <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+            View Project Details <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
           </a>
         </div>
       </div>
 
-      </div>
+    </div>
   </main>
 
   <footer class="bg-white py-12 border-t border-slate-100 mt-20">
     <div class="container mx-auto px-6 flex justify-between items-center text-xs font-bold uppercase tracking-widest text-slate-400">
-      <p>&copy; 2026 Brynn Morrow</p>
+      <p>&copy; <span id="year"></span> Brynn Morrow</p>
       <div class="flex gap-8">
         <a href="https://linkedin.com/in/brynn-morrow/" class="hover:text-emerald-600 transition-colors">LinkedIn</a>
         <a href="https://github.com/brynnmorrow" class="hover:text-emerald-900 transition-colors">GitHub</a>
@@ -93,8 +161,78 @@
   </footer>
 
   <script>
-    // Include your existing script logic here, it remains functional 
-    // but the UI will now render with the updated Emerald classes.
+    // Logic from script.js: Typewriter Effect
+    function loopTypewriter(el, text, typeMs = 85, pauseMs = 1200, eraseMs = 35) {
+      let i = 0, dir = 1;
+      function tick() {
+        el.textContent = text.slice(0, i);
+        if (dir === 1 && i < text.length) {
+          i++; setTimeout(tick, typeMs);
+        } else if (dir === 1) {
+          dir = -1; setTimeout(tick, pauseMs);
+        } else if (dir === -1 && i > 0) {
+          i--; setTimeout(tick, eraseMs);
+        } else {
+          dir = 1; setTimeout(tick, 500);
+        }
+      }
+      tick();
+    }
+
+    // Initialize Page Content
+    document.addEventListener("DOMContentLoaded", () => {
+      const typeEl = document.getElementById("typeTarget");
+      if (typeEl) loopTypewriter(typeEl, "Featured Projects...");
+
+      const yearEl = document.getElementById("year");
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      const projectsGrid = document.getElementById("projectsGrid");
+      const allCards = Array.from(document.querySelectorAll(".project-card"));
+      const sortSelect = document.getElementById("sortSelect");
+      const banner = document.getElementById("filterBanner");
+      const filterName = document.getElementById("activeFilterName");
+      const clearBtn = document.getElementById("clearFilterBtn");
+
+      // Filtering Logic from projects.html
+      const urlParams = new URLSearchParams(window.location.search);
+      const selectedSkill = urlParams.get("skill");
+      const selectedLabel = urlParams.get("label");
+
+      function applySort(criteria) {
+        const sorted = [...allCards].sort((a, b) => {
+          if (criteria === "newest") return new Date(b.dataset.date) - new Date(a.dataset.date);
+          if (criteria === "oldest") return new Date(a.dataset.date) - new Date(b.dataset.date);
+          if (criteria === "alphabetical") return a.dataset.title.localeCompare(b.dataset.title);
+          return 0;
+        });
+        sorted.forEach(card => projectsGrid.appendChild(card));
+      }
+
+      function filterBy(skillKey, label) {
+        allCards.forEach(card => {
+          const skills = (card.getAttribute("data-skills") || "").toLowerCase().split(/\s+/);
+          card.style.display = skills.includes(skillKey) ? "" : "none";
+        });
+        if (banner) {
+          filterName.textContent = label || skillKey;
+          banner.classList.remove("hidden");
+        }
+      }
+
+      function showAll() {
+        allCards.forEach(c => (c.style.display = ""));
+        if (banner) banner.classList.add("hidden");
+        if (history.replaceState) history.replaceState({}, "", window.location.pathname);
+      }
+
+      // Initial Sort & Filter
+      applySort(sortSelect.value || "newest");
+      if (selectedSkill) filterBy(selectedSkill, selectedLabel);
+
+      sortSelect.addEventListener("change", (e) => applySort(e.target.value));
+      clearBtn.addEventListener("click", showAll);
+    });
   </script>
 </body>
 </html>
