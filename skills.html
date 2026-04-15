@@ -3,286 +3,160 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brynn Morrow – Skills</title>
-
-  <!-- Tailwind -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-  />
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <title>Skills | Brynn Morrow</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:italic,wght@0,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-slate-50 text-slate-900 font-sans">
 
-  <!-- HEADER -->
-  <header class="bg-white shadow">
-    <div class="container mx-auto px-6 py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-      <h1 class="text-3xl font-bold">
-        <a href="index.html" class="custom-text">Brynn Morrow</a>
+  <header class="bg-white/80 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold tracking-tighter uppercase">
+        <a href="index.html" class="hover:text-emerald-600 transition-colors">Brynn Morrow</a>
       </h1>
-
-      <nav class="flex flex-wrap gap-x-6 gap-y-2 text-lg">
-        <a href="projects.html" class="nav-link">Projects</a>
-        <a href="skills.html" class="nav-link">Skills</a>
-        <a href="experience.html" class="nav-link">Experience</a>
-        <a href="education.html" class="nav-link">Education</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+      <nav class="hidden md:flex gap-x-8 text-xs font-bold uppercase tracking-widest">
+        <a href="projects.html" class="nav-link hover:text-emerald-600 transition-colors">Projects</a>
+        <a href="skills.html" class="text-emerald-600">Skills</a>
+        <a href="experience.html" class="nav-link hover:text-emerald-600 transition-colors">Experience</a>
+        <a href="education.html" class="nav-link hover:text-emerald-600 transition-colors">Education</a>
+        <a href="contact.html" class="nav-link hover:text-emerald-600 transition-colors">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- MAIN -->
-  <main class="container mx-auto my-12 p-6 bg-white rounded shadow">
+  <main class="container mx-auto px-6 py-12 max-w-6xl">
+    <div class="mb-12">
+      <h2 class="text-5xl font-bold mb-4">Technical <span class="italic font-serif text-emerald-900">Proficiencies</span></h2>
+      <p class="text-slate-600 max-w-2xl text-lg font-light">
+        A comprehensive breakdown of my technical stack across software development, geospatial analysis, and testing frameworks.
+      </p>
+    </div>
 
-    <!-- TITLE -->
-    <section class="mb-8">
-      <h2 class="animated-text">Skills</h2>
-    </section>
+    <div class="flex flex-wrap gap-3 mb-10">
+      <button class="chip chip-active border border-slate-200 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all" data-filter="all">✨ All Tech</button>
+      <button class="chip border border-slate-200 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all hover:border-emerald-500" data-filter="languages">🔊 Languages</button>
+      <button class="chip border border-slate-200 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all hover:border-emerald-500" data-filter="software">⚙ Software & GIS</button>
+      <button class="chip border border-slate-200 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all hover:border-emerald-500" data-filter="libraries">📚 Frameworks</button>
+    </div>
 
-    <!-- SKILLS -->
-    <section class="max-w-5xl mx-auto px-6 py-8">
+    <div id="skillsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
-      <!-- FILTER CHIPS -->
-      <div class="flex flex-wrap gap-3 justify-center mb-8">
-        <button class="chip chip-active" data-filter="all">✨ All</button>
-        <button class="chip" data-filter="languages">🔊 Languages</button>
-        <button class="chip" data-filter="software">⚙ Software</button>
-        <button class="chip" data-filter="libraries">📚 Libraries</button>
-      </div>
+      <a href="projects.html?skill=assembly&label=Assembly" data-cat="languages" data-skill="Assembly" class="skill-card group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-emerald-500 hover:shadow-md transition-all">
+        <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-2">Language</p>
+        <h3 class="text-lg font-bold group-hover:text-emerald-900 transition-colors">Assembly</h3>
+      </a>
 
-      <!-- GRID -->
-      <div
-        id="skillsGrid"
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
-      >
+      <a href="projects.html?skill=c&label=C" data-cat="languages" data-skill="C" class="skill-card group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-emerald-500 hover:shadow-md transition-all">
+        <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-2">Language</p>
+        <h3 class="text-lg font-bold group-hover:text-emerald-900 transition-colors">C</h3>
+      </a>
 
-        <!-- LANGUAGES -->
-        <a href="projects.html?skill=assembly&label=Assembly"
-           data-cat="languages"
-           data-skill="Assembly">
-          <article class="skill-card rounded-2xl p-6 hover:border-blue-500 transition-colors cursor-pointer">
-            <h3 class="text-xl font-bold">🔊 Assembly</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
+      <a href="projects.html?skill=java&label=Java" data-cat="languages" data-skill="Java" class="skill-card group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-emerald-500 hover:shadow-md transition-all">
+        <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-2">Language</p>
+        <h3 class="text-lg font-bold group-hover:text-emerald-900 transition-colors">Java</h3>
+      </a>
 
-        <a href="projects.html?skill=c&label=C"
-           data-cat="languages"
-           data-skill="C">
-          <article class="skill-card rounded-2xl p-6 hover:border-blue-500 transition-colors cursor-pointer">
-            <h3 class="text-xl font-bold">🔊 C</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
+      <a href="projects.html?skill=javascript&label=JavaScript" data-cat="languages" data-skill="JavaScript" class="skill-card group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-emerald-500 hover:shadow-md transition-all">
+        <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-2">Language</p>
+        <h3 class="text-lg font-bold group-hover:text-emerald-900 transition-colors">JavaScript</h3>
+      </a>
 
-        <a href="projects.html?skill=java&label=Java"
-           data-cat="languages"
-           data-skill="Java">
-          <article class="skill-card rounded-2xl p-6 hover:border-blue-500 transition-colors cursor-pointer">
-            <h3 class="text-xl font-bold">🔊 Java</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
+      <a href="projects.html?skill=python&label=Python" data-cat="languages" data-skill="Python" class="skill-card group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-emerald-500 hover:shadow-md transition-all">
+        <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-2">Language</p>
+        <h3 class="text-lg font-bold group-hover:text-emerald-900 transition-colors">Python</h3>
+      </a>
 
-        <a href="projects.html?skill=javascript&label=JavaScript"
-           data-cat="languages"
-           data-skill="JavaScript">
-          <article class="skill-card rounded-2xl p-6 hover:border-blue-500 transition-colors cursor-pointer">
-            <h3 class="text-xl font-bold">🔊 JavaScript</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
+      <a href="projects.html?skill=r&label=R" data-cat="languages" data-skill="R" class="skill-card group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-emerald-500 hover:shadow-md transition-all">
+        <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-2">Language</p>
+        <h3 class="text-lg font-bold group-hover:text-emerald-900 transition-colors">R</h3>
+      </a>
 
-        <a href="projects.html?skill=latex&label=LaTeX"
-           data-cat="languages"
-           data-skill="LaTeX">
-          <article class="skill-card rounded-2xl p-6 hover:border-blue-500 transition-colors cursor-pointer">
-            <h3 class="text-xl font-bold">🔊 LaTeX</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
+      <a href="projects.html?skill=arcgis&label=ArcGIS%20Pro" data-cat="software" data-skill="ArcGIS Pro" class="skill-card group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-emerald-500 hover:shadow-md transition-all">
+        <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-2">GIS Software</p>
+        <h3 class="text-lg font-bold group-hover:text-emerald-900 transition-colors">ArcGIS Pro</h3>
+      </a>
 
-        <a href="projects.html?skill=python&label=Python"
-           data-cat="languages"
-           data-skill="Python">
-          <article class="skill-card rounded-2xl p-6 hover:border-blue-500 transition-colors cursor-pointer">
-            <h3 class="text-xl font-bold">🔊 Python</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
+      <a href="projects.html?skill=git&label=Git" data-cat="software" data-skill="Git" class="skill-card group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-emerald-500 hover:shadow-md transition-all">
+        <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-2">Version Control</p>
+        <h3 class="text-lg font-bold group-hover:text-emerald-900 transition-colors">Git / GitHub</h3>
+      </a>
 
-        <a href="projects.html?skill=r&label=R"
-           data-cat="languages"
-           data-skill="R">
-          <article class="skill-card rounded-2xl p-6 hover:border-blue-500 transition-colors cursor-pointer">
-            <h3 class="text-xl font-bold">🔊 R</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
+      <a href="projects.html?skill=vscode&label=VS%20Code" data-cat="software" data-skill="Visual Studio Code" class="skill-card group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-emerald-500 hover:shadow-md transition-all">
+        <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-2">IDE</p>
+        <h3 class="text-lg font-bold group-hover:text-emerald-900 transition-colors">VS Code</h3>
+      </a>
 
-        <!-- SOFTWARE -->
-        <a href="projects.html?skill=arcgis&label=ArcGIS%20Pro"
-           data-cat="software"
-           data-skill="ArcGIS Pro">
-          <article class="skill-card rounded-2xl p-6 hover:border-blue-500 transition-colors cursor-pointer">
-            <h3 class="text-xl font-bold">⚙ ArcGIS Pro</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
+      <a href="projects.html?skill=junit&label=JUnit" data-cat="libraries" data-skill="JUnit" class="skill-card group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-emerald-500 hover:shadow-md transition-all">
+        <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-2">Testing</p>
+        <h3 class="text-lg font-bold group-hover:text-emerald-900 transition-colors">JUnit</h3>
+      </a>
 
-        <a href="projects.html?skill=gdb&label=GDB"
-           data-cat="software"
-           data-skill="GDB">
-          <article class="skill-card rounded-2xl p-6 hover:border-blue-500 transition-colors cursor-pointer">
-            <h3 class="text-xl font-bold">⚙ GDB</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
+      <a href="projects.html?skill=mockito&label=Mockito" data-cat="libraries" data-skill="Mockito" class="skill-card group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-emerald-500 hover:shadow-md transition-all">
+        <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-2">Framework</p>
+        <h3 class="text-lg font-bold group-hover:text-emerald-900 transition-colors">Mockito</h3>
+      </a>
 
-        <a href="projects.html?skill=git&label=Git"
-           data-cat="software"
-           data-skill="Git">
-          <article class="skill-card rounded-2xl p-6 hover:border-blue-500 transition-colors cursor-pointer">
-            <h3 class="text-xl font-bold">⚙ Git</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
-
-        <a href="projects.html?skill=github&label=GitHub"
-           data-cat="software"
-           data-skill="GitHub">
-          <article class="skill-card rounded-2xl p-6 hover:border-blue-500 transition-colors cursor-pointer">
-            <h3 class="text-xl font-bold">⚙ GitHub</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
-
-        <a href="projects.html?skill=gradle&label=Gradle"
-           data-cat="software"
-           data-skill="Gradle">
-          <article class="skill-card rounded-2xl p-6 hover:border-blue-500 transition-colors cursor-pointer">
-            <h3 class="text-xl font-bold">⚙ Gradle</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
-
-        <a href="projects.html?skill=intellij&label=IntelliJ"
-           data-cat="software"
-           data-skill="IntelliJ">
-          <article class="skill-card rounded-2xl p-6 hover:border-blue-500 transition-colors cursor-pointer">
-            <h3 class="text-xl font-bold">⚙ IntelliJ</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
-
-        <a href="projects.html?skill=rstudio&label=RStudio"
-           data-cat="software"
-           data-skill="RStudio">
-          <article class="skill-card rounded-2xl p-6 hover:border-blue-500 transition-colors cursor-pointer">
-            <h3 class="text-xl font-bold">⚙ RStudio</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
-
-        <a href="projects.html?skill=vscode&label=VS%20Code"
-           data-cat="software"
-           data-skill="Visual Studio Code">
-          <article class="skill-card rounded-2xl p-6 hover:border-blue-500 transition-colors cursor-pointer">
-            <h3 class="text-xl font-bold">⚙ Visual Studio Code</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
-
-        <!-- LIBRARIES -->
-        <a href="projects.html?skill=jacoco&label=JaCoCo"
-           data-cat="libraries"
-           data-skill="JaCoCo">
-          <article class="skill-card rounded-2xl p-6 hover:border-blue-500 transition-colors cursor-pointer">
-            <h3 class="text-xl font-bold">📚 JaCoCo</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
-
-        <a href="projects.html?skill=junit&label=JUnit"
-           data-cat="libraries"
-           data-skill="JUnit">
-          <article class="skill-card rounded-2xl p-6 hover:border-blue-500 transition-colors cursor-pointer">
-            <h3 class="text-xl font-bold">📚 JUnit</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
-
-        <a href="projects.html?skill=mockito&label=Mockito"
-           data-cat="libraries"
-           data-skill="Mockito">
-          <article class="skill-card rounded-2xl p-6 hover:border-blue-500 transition-colors cursor-pointer">
-            <h3 class="text-xl font-bold">📚 Mockito</h3>
-            <div class="accent mt-4"></div>
-          </article>
-        </a>
-
-      </div>
-    </section>
+    </div>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="bg-white p-6 mt-12 shadow-inner">
-    <div class="container mx-auto px-6">
-      <p class="text-sm text-gray-600">
-        &copy; <span id="year"></span> Brynn Morrow
-      </p>
+  <footer class="bg-white py-12 border-t border-slate-100 mt-20">
+    <div class="container mx-auto px-6 flex justify-between items-center text-xs font-bold uppercase tracking-widest text-slate-400">
+      <p>&copy; <span id="year"></span> Brynn Morrow</p>
+      <div class="flex gap-8">
+        <a href="https://linkedin.com/in/brynn-morrow/" class="hover:text-emerald-600 transition-colors">LinkedIn</a>
+        <a href="https://github.com/brynnmorrow" class="hover:text-emerald-900 transition-colors">GitHub</a>
+      </div>
     </div>
   </footer>
 
-  <!-- SCRIPT -->
   <script>
-    // year
-    const y = document.getElementById("year");
-    if (y) y.textContent = new Date().getFullYear();
+    document.addEventListener("DOMContentLoaded", () => {
+      // Set Year
+      const y = document.getElementById("year");
+      if (y) y.textContent = new Date().getFullYear();
 
-    const grid = document.getElementById("skillsGrid");
-    const chips = document.querySelectorAll(".chip[data-filter]");
+      const grid = document.getElementById("skillsGrid");
+      const chips = document.querySelectorAll(".chip[data-filter]");
+      const items = Array.from(grid.querySelectorAll(".skill-card"));
 
-    // collect items
-    const items = Array.from(
-      grid.querySelectorAll("a[data-cat][data-skill]")
-    );
-
-    // sort by category, then alphabetically
-    items.sort((a, b) => {
-      const catA = a.dataset.cat;
-      const catB = b.dataset.cat;
-      if (catA !== catB) return catA.localeCompare(catB);
-      return a.dataset.skill.localeCompare(b.dataset.skill);
-    });
-
-    // reinsert sorted
-    items.forEach(item => grid.appendChild(item));
-
-    function setActiveChip(active) {
-      chips.forEach(c => c.classList.toggle("chip-active", c === active));
-    }
-
-    function applyFilter(filter) {
-      items.forEach(item => {
-        item.style.display =
-          filter === "all" || item.dataset.cat === filter ? "" : "none";
+      // Sort by category then name
+      items.sort((a, b) => {
+        const catA = a.closest('a').dataset.cat;
+        const catB = b.closest('a').dataset.cat;
+        if (catA !== catB) return catA.localeCompare(catB);
+        return a.closest('a').dataset.skill.localeCompare(b.closest('a').dataset.skill);
       });
-    }
 
-    // init
-    applyFilter("all");
+      // Re-insert sorted
+      items.forEach(item => grid.appendChild(item.closest('a')));
 
-    chips.forEach(chip => {
-      chip.addEventListener("click", () => {
-        setActiveChip(chip);
-        applyFilter(chip.dataset.filter);
+      function applyFilter(filter) {
+        items.forEach(item => {
+          const wrapper = item.closest('a');
+          wrapper.style.display = (filter === "all" || wrapper.dataset.cat === filter) ? "" : "none";
+        });
+      }
+
+      chips.forEach(chip => {
+        chip.addEventListener("click", () => {
+          // Toggle Classes
+          chips.forEach(c => {
+            c.classList.remove("chip-active", "bg-emerald-900", "text-white");
+            c.classList.add("border-slate-200");
+          });
+          
+          chip.classList.add("chip-active", "bg-emerald-900", "text-white");
+          chip.classList.remove("border-slate-200");
+          
+          applyFilter(chip.dataset.filter);
+        });
       });
+
+      // Initialize
+      applyFilter("all");
     });
   </script>
-
 </body>
 </html>
